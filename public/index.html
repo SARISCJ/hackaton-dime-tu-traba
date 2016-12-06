@@ -13,7 +13,7 @@
 		<link rel="stylesheet" href="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/DataTables-1.10.12/extensions/Responsive/css/responsive.bootstrap.min.css" />  
 		<link rel="stylesheet" href="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/DataTables-1.10.12/media/css/dataTables.bootstrap.partial.css" />  
 		<link rel="stylesheet" href="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/bootstrap-datepicker-1.6.1-dist/css/bootstrap-datepicker3.min.css" />          
-		<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,200,300,500,700,800' rel='stylesheet' type='text/css'>    
+		<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,200,300,500,700,800' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/views/layout/default/css/site.css" /> 
 		<link rel="shortcut icon" href="favicon.ico">    
 
@@ -31,13 +31,12 @@
 		<script type="text/javascript" src="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/jquery.inputmask/inputmask.js"></script>
 		<script type="text/javascript" src="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/plugin-paginate/responsive-paginate.js"></script>
 		<script type="text/javascript" src="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/bootbox/bootbox.js"></script>
-		<script type="text/javascript"> const BASE_URL = "http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/";
-		  </script>
+		<script type="text/javascript"> const BASE_URL = "http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/";</script>
+    <script src="https://use.fontawesome.com/d24cc37567.js"></script>
 	</head>
 <body>
     <style type="text/css">
-      @import url(//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css);
-     /*  body { margin: 30px; }  */
+      /*  body { margin: 30px; }  */
       input[type=radio].with-font,
       input[type=checkbox].with-font {
         border: 0;
@@ -92,68 +91,73 @@
       .upper{
         text-transform:uppercase !important;
       }
-      	.asterisco{
+      .asterisco{
         color:#F00 !important;
         font-weight:bold;
       }
-		.header-back{
-			background-color: #FF3C09;
-			height: 13.6rem;
-		}
-		.header-back h3 {
-			color: white;
-			margin-top: 4rem;
-		}
-		.fondo-img img{
-			margin-top: -14rem;
-		}
-		.fondo-img {
-			height: 0;
-			border-top: 13.6rem solid #fff;
-			border-right: 21rem solid transparent;
-		}
-		/*section btn*/
-		.section-btn{
-			background: #F6F8F7;
-		}
-		.option-btn {
-			border-radius: 1rem;
-			background: #FF3C09;
-			color: white !important;
-			font-size: 1.12em;
-			margin: 4.5rem;
-			padding: 2rem;
-		}
-		.btn:hover, .btn:focus {
-			text-decoration: none;
-			background: #e60606;
-		}
-		.text-form{
-			margin: 4rem;
-			line-height: 2rem;
-		}
-		.text-form h3 {
-			line-height: 1.4;
-		}
-      	#footer {
-			background:#FF3C09;
-			color: #FFFFFF;
-		  }
-      	#footer .img-responsive {
-        	width: 65%;
-        	margin: 1.5rem 5rem;
-      	}
-      	#footer .copyright{
-			text-align: center;
-			margin: 3rem;  
-		}
-      	#footer .preguntas-frecuentes{
-			margin: 2.8rem;
-			text-decoration: none;
-			color: #ffffff;
-			position: absolute;
-			right: 4%;
-		}
+      .header-back{
+        background-color: #FF3C09;
+        height: 13.6rem;
+      }
+      .header-back h3 {
+        color: white;
+        margin-top: 4rem;
+      }
+      .fondo-img img{
+        margin-top: -14rem;
+      }
+      .fondo-img {
+        height: 0;
+        border-top: 13.6rem solid #fff;
+        border-right: 21rem solid transparent;
+      }
+     /*section btn*/
+     .section-btn{
+        background: #F6F8F7;
+     }
+     .option-btn {
+        border-radius: 1rem;
+        background: #FF3C09;
+        color: white !important;
+        font-size: 1.12em;
+        margin: 4.5rem;
+        padding: 2rem;
+     }
+     .btn:hover, .btn:focus {
+        text-decoration: none;
+        background: #e60606;
+     }
+     .text-form{
+        margin: 4rem;
+        line-height: 2rem;
+     }
+     .text-form h3 {
+        line-height: 1.4;
+     }
+
+     #form-traba {
+        padding: 2rem 4rem;
+      }
+
+      #footer {
+        background:#FF3C09;
+        color: #FFFFFF;
+      }
+      #footer .img-responsive {
+        width: 65%;
+        margin: 1.5rem 5rem;
+      }
+      #footer .copyright{
+        text-align: center;
+        margin: 3rem;  
+      }
+      #footer .preguntas-frecuentes{
+       margin: 2.8rem;
+       text-decoration: none;
+       color: #ffffff;
+       position: absolute;
+       right: 4%;
+      }
 		/*responsive*/
 		@media screen and (max-width: 767px) {
 			.header-back {
@@ -201,7 +205,7 @@
 			  -o-transition-property: height, visibility;
 			  transition-property: height, visibility;
 			}
-      	}
+   	}
     </style>
 
 	  	<header class="header-back">
@@ -233,11 +237,13 @@
 			  	</div>
 		  	</div>
 	 	</section>
-      	<div class="container">
-        	<form class="" id="form-traba">
-          		<div class="row form-group">
-            	<label class="col-sm-4 form-control-label text-right"><b>¿Dónde encontraste una traba?</b><span class="asterisco">(*)</span></label>               
-            	<div class="col-sm-8">
+     
+    <section id="formulario">
+        <div class="container">
+          <form id="form-traba">
+              <div class="row form-group">
+              <label class="col-sm-4 form-control-label text-right"><b>¿Dónde encontraste una traba?</b><span class="asterisco">(*)</span></label>               
+              <div class="col-sm-8">
               <select class = "form-control input-sm" id="cboEntidad" name="Traba[entidad]"> 
                <option value="0">SELECCIONE</option><option value="2">GOBIERNO REGIONAL</option><option value="1">MINISTERIO</option><option value="3">MUNICIPALIDAD</option><option value="82">ORGANISMOS AUTÓNOMOS</option><option value="4">OTRO</option>          </select>   
 
@@ -328,25 +334,27 @@
 
               <!--<label class="col-sm-8 form-control-label text-right"><a href="javascritp:;" onclick="fn_preguntas();">
               <img src="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/public/img//preguntas.png"></a></label>-->
-              <label class="col-sm-8 form-control-label text-right"><a href="javascritp:;" onclick="fn_preguntas();" style="color:#7F7F7F;"><u>Preguntas frecuentes</u></a></label>            
-            </div>  
+              <!--              <label class="col-sm-8 form-control-label text-right"><a href="javascritp:;" onclick="fn_preguntas();" style="color:#7F7F7F;"><u>Preguntas frecuentes</u></a></label>       -->      
+  </div>  
 
-            <hr>
-            <div id="errors"></div>
+      <hr>
+      <div id="errors"></div>
 
-            <div id="mensaje-condicion">
-              <p class="text-center">No nos podemos comprometer a que todas las trabas podrán ser atendidas y superadas pero estamos seguros que el primer paso es su identificación.</p>
-            </div>
+      <div id="mensaje-condicion">
+          <p class="text-center">No nos podemos comprometer a que todas las trabas podrán ser atendidas y superadas pero estamos seguros que el primer paso es su identificación.</p>
+      </div>
 
-            <div class="row form-group ">
-              <div class="col-sm-12 text-center">
-                <button type="button" class="btn btn-primary btn-sm" style="background:#FF3D16 !important;" onclick="fn_enviarTraba();"> Enviar </button>       
-                <button type="button" class="btn btn-default btn-sm"  onclick="fn_cancelar();"> Cancelar </button>                            
-              </div>
-            </div>     
-          </form>
-        </div>
-	  	<div id="footer">
+      <div class="row form-group ">
+          <div class="col-sm-12 text-center">
+            <button type="button" class="btn btn-primary btn-sm" style="background:#FF3D16 !important;" onclick="fn_enviarTraba();"> Enviar </button>       
+            <button type="button" class="btn btn-default btn-sm"  onclick="fn_cancelar();"> Cancelar </button>                            
+          </div>
+      </div>     
+    </form>
+   </div> 
+  </section>  	
+
+	  <div id="footer">
 			<div class="container">
 		  		<div class="row">
 					<div class="col-md-4 col-sm-4 col-xs-12 hidden-responsive">
@@ -356,11 +364,11 @@
 			  			<p class="copyright">Copyright © 2016 Ministerio de la Producción.</p>
 					</div>
 					<div class="col-md-4 col-sm-4 col-xs-12 hidden-responsive">
-			  			<a href="#" class="preguntas-frecuentes">Preguntas frecuentes</a>
+			  			<a href="javascritp:;" class="preguntas-frecuentes" onclick="fn_preguntas();">Preguntas frecuentes</a>
 					</div>           
 		  		</div>
 			</div>
-	  	</div>
+	  </div>
 
 
 <!-- Modal -->
@@ -375,16 +383,11 @@
         </div>
         <div class="modal-body">     
           <b>1.- ¿Por qué no se me pide información de contacto?</b><br>
-          <p align="justify">DimeTuTraba.pe es una interfase de registro masivo y anónimo de trabas y por esa razón no se pide ninguna información de contacto. No vamos a responder individualmente por que una Traba no afecta a una sola persona sino a todos. Conformen se vayan resolviendo las trabas se comunicarán desde los propios ministerios, oficinas y organismos por medio de comunicados en diversos medios y en sus portales institucionales.</p><br>
-          <b>2.- ¿Que es una Traba?</b><br>
-          <p align="justify">Una traba es un trámite, requisito, procedimiento que afecta a una persona o una empresa, pero NO en particular, sino que puede afectar a todos los que pasan por el mismo proceso o usan el mismo servicio. Una traba NO es una denuncia, una queja o un reclamo. DimeTuTraba.pe no es un servicio de atención individual.</p><br>
-          <b>3.- ¿Y si queiro hacer una Denuncia o un Reclamo?</b><br>
-          <p align="justify">Cada institución tiene su propio sistema de Denuncias, Reclamos y/o Quejas. Recomendamos usar el Libro de Reclamaciones de cada institución en caso de tener una denuncia o queja más que una Traba.</p><br>
-          <b>4.- ¿Hay personas que quieren decir su Traba por teléfono, es eso posible?</b><br>
-          <p align="justify">Estamos probando una opción que nos permitirá registrar trabas por medio de grabaciones pero por le momento la única opción es el mini site o pagina web <a href="http://www.dimetutraba.pe">http://www.dimetutraba.pe</a></p><br> 
-          <b>5.- ¿Cómo se si mi Traba ha sido "escuchada" y si será atendida?</b><br>
-          <p align="justify">Toda la información registrada será enviada a los ministerios, oficinas y organismos involucrados y el Ministerio de la Producción en coordinación con la Presidencia del Consejo de Ministros hará el seguimiento al análisis de la información y a la implementación de los posibles mejoras. Conformen se vayan resolviendo las trabas se comunicarán desde los propios ministerios, oficinas y organismos por medio de comunicados y en sus portales institucionales.</p>         
-
+          <p align="justify"><b>DimeTuTraba.pe</b> es una interfase de registro masivo y anónimo de trabas y por esa razón no se pide ninguna información de contacto. No vamos a responder individualmente por que una Traba no afecta a una sola persona sino a todos. Conformen se vayan resolviendo las trabas se comunicarán desde los propios ministerios, oficinas y organismos por medio de comunicados en diversos medios y en sus portales institucionales.</p><br>
+          <b>2.- ¿Hay personas que quieren decir su Traba por teléfono, es eso posible?</b><br>
+          <p align="justify">Estamos probando una opción que nos permitirá registrar trabas por medio de grabaciones pero por el momento la única opción es el mini site o página web <a href="http://www.dimetutraba.pe">http://www.dimetutraba.pe</a></p><br> 
+          <b>3.- ¿Cómo sé si mi Traba ha sido "escuchada" y si será atendida?</b><br>
+          <p align="justify">Toda la información registrada será enviada a los ministerios, oficinas y organismos involucrados y el Ministerio de la Producción en coordinación con la Presidencia del Consejo de Ministros hará el seguimiento al análisis de la información y a la implementación de los posibles mejoras. Conformen se vayan resolviendo las trabas se comunicarán desde los propios ministerios, oficinas y organismos por medio de comunicados y en sus portales institucionales.</p> 
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cerrar</button>
