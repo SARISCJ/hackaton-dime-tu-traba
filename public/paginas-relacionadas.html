@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" lang="en">
+		<title>Dime Tu Traba</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<!-- CSS-->
+		<link rel="stylesheet" href="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/bootstrap-3.3.6-dist/css/bootstrap.min.css" /> 
+		<link rel="stylesheet" href="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/DataTables-1.10.12/media/css/dataTables.bootstrap.min.css" />  
+		<link rel="stylesheet" href="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/DataTables-1.10.12/extensions/Responsive/css/responsive.bootstrap.min.css" />  
+		<link rel="stylesheet" href="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/DataTables-1.10.12/media/css/dataTables.bootstrap.partial.css" />  
+		<link rel="stylesheet" href="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/bootstrap-datepicker-1.6.1-dist/css/bootstrap-datepicker3.min.css" />          
+		<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,200,300,500,700,800' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/views/layout/default/css/site.css" /> 
+		<link rel="shortcut icon" href="favicon.ico">    
+
+
+		<!--JS--> 
+		<script type="text/javascript" src="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/jquery/jquery-1.12.3.js"></script>
+		<script type="text/javascript" src="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/jquery/jquery.number.min.js"></script>
+		<script type="text/javascript" src="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/DataTables-1.10.12/media/js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/DataTables-1.10.12/media/js/dataTables.bootstrap.min.js"></script>    
+		<script type="text/javascript" src="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/DataTables-1.10.12/extensions/Responsive/js/dataTables.responsive.min.js"></script>
+		<script type="text/javascript" src="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/DataTables-1.10.12/extensions/Responsive/js/responsive.bootstrap.min.js"></script>      
+		<script type="text/javascript" src="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/bootstrap-datepicker-1.6.1-dist/js/bootstrap-datepicker.min.js"></script>
+		<script type="text/javascript" src="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/bootstrap-datepicker-1.6.1-dist/locales/bootstrap-datepicker.es.min.js"></script> 
+		<script type="text/javascript" src="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/jquery.inputmask/inputmask.js"></script>
+		<script type="text/javascript" src="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/plugin-paginate/responsive-paginate.js"></script>
+		<script type="text/javascript" src="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/bootbox/bootbox.js"></script>
+		<script type="text/javascript"> const BASE_URL = "http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/";</script>
+		<script src="https://use.fontawesome.com/d24cc37567.js"></script>
+	</head>
+	<body>
+		<style type="text/css">
+			a, a:hover{
+				text-decoration: none;
+			}
+			.header-back{
+				background-color: #FF3C09;
+				height: 13.6rem;
+			}
+			.fondo-img img{
+				margin-top: -14rem;
+			}
+			.fondo-img {
+				height: 0;
+				border-top: 13.6rem solid #fff;
+				border-right: 21rem solid transparent;
+			}
+			#pag-section{
+				text-align: center;
+			}
+			.otras-paginas{
+				width: 100%;
+    			margin: 2rem 0.5rem;
+			}
+			#footer {
+				background:#FF3C09;
+				color: #FFFFFF;
+			}
+			#footer .img-responsive {
+				width: 65%;
+				margin: 1.5rem 5rem;
+			}
+			#footer .copyright{
+				text-align: center;
+				margin: 3rem;  
+			}
+			#footer .preguntas-frecuentes{
+				margin: 2.8rem;
+				text-decoration: none;
+				color: #ffffff;
+				position: absolute;
+				right: 4%;
+			}
+			#footer .pag-relacionadas{
+				margin: 3rem;
+				text-decoration: none;
+				color: #ffffff;
+				position: absolute;
+				right: 1%;				
+			}
+			/*responsive*/
+			@media screen and (max-width: 767px) {
+				.header-back {
+					height: 19.6rem;
+					margin-left: 0;
+					margin-right: 0;
+				}
+				.menu-btn{
+					text-align: center;
+				}
+		        .img-logo{
+		          margin: 1rem 11rem;
+		        }
+		        .fondo-img {
+		          height: 0;
+		          border-right: 0rem solid transparent;            
+		        }  				
+				.option-btn {
+					font-size: 0.9em;
+					margin: 0.6rem;
+					padding: 1rem;
+				}
+			}
+		</style>
+		<header class="header-back">
+		  	<div class="col-sm-3 fondo-img">
+				<a href="index.html"><img src="http://i63.tinypic.com/azgvtd.png" class="img-logo" alt="dime-tu-traba"></a>
+			</div>
+	  	</header>
+		<section id="pag-section">
+			<div class="container">
+				<h1>Páginas dónde podrás hacer tus denuncias, quejas o reclamos</h1>
+				<h3>¿Lo tuyo es una traba? <a href="index.html">Clic aquí</a></h3>
+				<div class="row">
+					<div class="col-md-4">
+						<img class="otras-paginas" src="http://i65.tinypic.com/122mg0i.jpg">
+						<h2>Ministerio de trabajo y promoción del empleo</h2>
+						<p>Sistema de denuncias en Lima</p>
+					</div>
+					<div class="col-md-4">
+						<img class="otras-paginas" src="http://i65.tinypic.com/122mg0i.jpg">
+						<h2>SUNAT</h2>
+						<p>Para Consultar el estado de su Queja Reclamo o Sugerencia</p>						
+					</div>
+					<div class="col-md-4">
+						<img class="otras-paginas" src="http://i65.tinypic.com/122mg0i.jpg">
+						<h2>Indecopi</h2>
+						<p>Libro de Reclamaciones</p>						
+					</div>
+				</div>
+			</div>
+		</section>
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-sm-4 col-xs-12 hidden-responsive">
+						<img src="http://i68.tinypic.com/96gw9w.jpg" alt="logo ministerio de produccion" class="img-responsive">
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-12">
+						<p class="copyright">Copyright © 2016 Ministerio de la Producción.</p>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-12 hidden-responsive">
+						<a href="javascritp:;" class="preguntas-frecuentes" onclick="fn_preguntas();">Preguntas frecuentes</a>
+					</div>           
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/views/layout/default/js/site.js"></script> 
+	</body> 
+</html> 
