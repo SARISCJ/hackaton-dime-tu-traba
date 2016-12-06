@@ -36,7 +36,9 @@
 	</head>
 	<body>
 		<style type="text/css">
-		  /*  body { margin: 30px; }  */	
+		  body { 
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+      }	
 			.img-alert{
 				width: 40%;
 				margin: 2rem 18rem;
@@ -143,7 +145,6 @@
 				background: #737373;
 			} 
 			.text-form{
-				margin: 4rem;
 				line-height: 2rem;
 			}
 			.text-form h3 {
@@ -153,7 +154,7 @@
 				text-decoration: none;
 				color: #ffffff;
 				position: absolute;
-				right: -4%;
+				right: 16%;
 				margin-top: 5rem;
 			}
 			#form-traba {
@@ -164,21 +165,22 @@
 				color: #FFFFFF;
 			  }
 			#footer .img-responsive {
-			width: 65%;
-			margin: 1.5rem 5rem;
+			  width: 65%;
+			  margin: 1.5rem 5rem;
 		  }
 			.copyright {
-				margin-top: 4rem;
+				margin-top: 2.5rem;
+        text-align: center;
 			}
-			#footer .preguntas-frecuentes{
 			#footer .copyright{
 				text-align: center;
 				margin: 3rem;  
 			}
+      #footer .preguntas-frecuentes{
 				text-decoration: none;
 				color: #ffffff;
 				position: absolute;
-				right: -4%;
+				right: 16%;
 				margin-top: 2rem;
 			}
 			/*responsive*/
@@ -189,7 +191,7 @@
 				.header-back h3 {
 					color: white;
 					font-size: 1em;
-          			margin: 1.5rem;
+          margin: 1.5rem;
 					text-align: center;
 				}
 				.header-back {
@@ -248,7 +250,7 @@
 				 	<div class="col-sm-12 menu-btn">
 						<button type="button" class="btn option-btn btn1 col-sm-12 col-md-12 col-lg-3" data-toggle="modal" data-target="#alert-traba">¿Qué es una traba?</button>
 						<button type="button" class="btn option-btn col-sm-12 col-md- col-lg-3" data-toggle="modal" data-target="#alert-denuncia">¿Tienes una denuncia y/o reclamo?</button>
-					 	<button type="button" href="estadistica.html" class="btn option-btn col-sm-12 col-md-3 col-lg-3">¡Mira las estadísticas!</button>
+					 	<a href="estadistica.html"><button type="button" class="btn option-btn col-sm-12 col-md-3 col-lg-3">¡Mira las estadísticas!</button></a>
 				  	</div>
 			  	</div>
 		  	</div>
@@ -257,8 +259,8 @@
 			<div class="container">
 				<div class="row">
 					  	<div class="text-form col-sm-12">
-						  	<h1>Dime tu traba</h1>
-						  	<h3>Todo trámite, procedimiento o requisito que te parezca autoritario, innecesario y/o repetitivo, puedes registrarlo en el siguiente formulario. Esta información será alcanzada a todas las instancias y autoridades relevantes y necesarias para su análisis y propuesta de mejora.</h3>
+						  	<h1 class="text-center">Dime tu traba</h1>
+						  	<h3 class="text-justify">Todo trámite, procedimiento o requisito que te parezca autoritario, innecesario y/o repetitivo, puedes registrarlo en el siguiente formulario. Esta información será alcanzada a todas las instancias y autoridades relevantes y necesarias para su análisis y propuesta de mejora.</h3>
 					  	</div>
 				</div>
 			</div>
@@ -385,12 +387,12 @@
 					<div id="errors"></div>
 					<div id="mensaje-condicion">
 						  <p>No nos podemos comprometer a que todas las trabas podrán ser atendidas y superadas pero estamos seguros que el primer paso es su identificación.</p>
-						<p>Si lo tuyo es una queja, te sugerimos revises estás páginas. <a href="">Clic aquí</a></p>
+						<p>Si lo tuyo es una queja, te sugerimos revises estás páginas. <a href="paginas-relacionadas.html">Clic aquí</a></p>
 					</div> 
 					<div class="row form-group ">
 						<div class="col-sm-12 text-center">
-							<button type="button" class="btn btn-primary btn-md" onclick="fn_enviarTraba();"> Enviar </button>       
-							<button type="button" class="btn btn-default btn-md" onclick="fn_cancelar();"> Cancelar </button>                            
+							<button type="button" class="btn btn-primary" onclick="fn_enviarTraba();"> Enviar </button>       
+							<button type="button" class="btn btn-default" onclick="fn_cancelar();"> Cancelar </button>                            
 						</div>
 					</div>     
 				</form>
@@ -512,7 +514,7 @@
 				return str.length >= max ? str.substring(0, max): str;
 			}
 			function fn_cancelar(){
-				location.href = "http://www.dimetutraba.pe/";
+				location.href = "index.html";
 			}
 			function fn_mensajeFinal(id_traba){
 				var theResponse = null;
