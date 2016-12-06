@@ -15,6 +15,7 @@
   <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,200,300,500,700,800' rel='stylesheet' type='text/css'> 
 	<link rel="stylesheet" href="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/views/layout/default/css/site.css" /> 
   <!--JS--> 
+
 	<script type="text/javascript" src="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/jquery/jquery-1.12.3.js"></script>
   <script type="text/javascript" src="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/jquery/jquery.number.min.js"></script>
 	<script type="text/javascript" src="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
@@ -31,6 +32,73 @@
 </head>
 <body>
   <style type="text/css">
+    body {
+      color: #FCFCFC;
+      height: 100vh;
+      font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    } 
+    .img-alert{
+      width: 40%;
+      margin: 2rem 18rem;
+    }
+    a, a:hover{
+      text-decoration: none;
+    }      
+        input[type=radio].with-font,
+    input[type=checkbox].with-font {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    input[type=radio].with-font ~ label:before,
+    input[type=checkbox].with-font ~ label:before {
+      font-family: FontAwesome;
+      display: inline-block;
+      content: "\f1db";
+      letter-spacing: 10px;
+      font-size: 1.2em;
+      color: #535353;
+      width: 1.4em;
+    }
+    input[type=radio].with-font:checked ~ label:before,
+    input[type=checkbox].with-font:checked ~ label:before  {
+      content: "\f00c";
+      font-size: 1.2em;
+      color: #FF3E16;
+      letter-spacing: 5px;
+    }
+    input[type=checkbox].with-font ~ label:before {        
+      content: "\f096";
+    }
+    input[type=checkbox].with-font:checked ~ label:before {
+      content: "\f046";        
+      color: #FF3E16;
+    }
+    input[type=radio].with-font:focus ~ label:before,
+    input[type=checkbox].with-font:focus ~ label:before,
+    input[type=radio].with-font:focus ~ label,
+    input[type=checkbox].with-font:focus ~ label{                
+      color: #FF3E16;
+    }
+    textarea{resize:none;}
+    .itemTitle{
+      display:none; 
+    }
+    .lower{
+      text-transform:lowercase !important;
+    }
+    .upper{
+      text-transform:uppercase !important;
+    }
+    .asterisco{
+      color:#F00 !important;
+      font-weight:bold;
+    }
     .header-back{
       background-color: #FF3C09;
       height: 13.6rem;
@@ -47,15 +115,94 @@
       border-top: 13.6rem solid #fff;
       border-right: 21rem solid transparent;
     }
+    /*formulario*/
+    #mensaje-condicion{
+      text-align: center;
+      font-style: italic;
+      padding: 1.5rem;
+    }
+    select:focus {
+    border:3px solid #FF3C09 !important;
+    margin-right:10px;
+    }
+    textarea:focus {
+    border:3px solid #FF3C09 !important;
+    margin-right:10px;
+    }
+    
+   /*section btn*/
+    .section-btn{
+      background: #F6F8F7;
+    }
+    .option-btn {
+      border-radius: 1rem;
+      background: #FF3C09;
+      color: white !important;
+      font-size: 1.12em;
+      margin: 4.5rem;
+      padding: 2rem;
+    }
+    .btn:hover, .btn:focus {
+      text-decoration: none;
+      background: #e60606;
+    }
+    .btn-default:hover,.btn-default:focus {
+      text-decoration: none;
+      background: #737373;
+    } 
+    .text-form{
+      line-height: 2rem;
+    }
+    .text-form h3 {
+      line-height: 1.4;
+    }
+    a.pregunta-relacionada {
+      text-decoration: none;
+      color: #ffffff;
+      position: absolute;
+      right: 16%;
+      margin-top: 5rem;
+    }
+    #form-traba {
+      padding: 2rem 4rem;
+      font-size: 1.2em;
+    }
+    #footer {
+      background:#FF3C09;
+      color: #FFFFFF;
+      }
+    #footer .img-responsive {
+      width: 65%;
+      margin: 1.5rem 5rem;
+    }
+    .copyright {
+      margin-top: 2.5rem;
+      text-align: center;
+    }
+    #footer .copyright{
+      text-align: center;
+      margin: 3rem;  
+    }
+    #footer .preguntas-frecuentes{
+      text-decoration: none;
+      color: #ffffff;
+      position: absolute;
+      right: 16%;
+      margin-top: 2rem;
+    }
     /*responsive*/
     @media screen and (max-width: 767px) {
+      .img-alert{
+        width: 50%;
+        margin: 2rem 6.5rem;
+      }
       .header-back {
         height: 19.6rem;
       }
       .header-back h3 {
         color: white;
         font-size: 1em;
-              margin: 1.5rem;
+        margin: 1.5rem;
         text-align: center;
       }
       .header-back {
@@ -66,17 +213,70 @@
         height: 0;
         border-right: 0rem solid transparent;
         text-align: center;
-      } 
-    }
+      }        
+      .menu-btn{
+        text-align: center;
+      }
+      .option-btn {
+        font-size: 0.9em;
+        margin: 0.6rem;
+        padding: 1rem;
+      }
+      .btn1{
+        margin-top: 5rem;
+      }
+      .text-form h3 {
+        line-height: 1.5;
+        font-size: 1em;
+        padding: 1.5rem;
+      }
+      .hidden-responsive{
+        position: relative;
+        height: 0;
+        overflow: hidden;
+        -webkit-transition-timing-function: ease;
+        -o-transition-timing-function: ease;
+        transition-timing-function: ease;
+        -webkit-transition-duration: .35s;
+        -o-transition-duration: .35s;
+        transition-duration: .35s;
+        -webkit-transition-property: height, visibility;
+        -o-transition-property: height, visibility;
+        transition-property: height, visibility;
+        }
+      }
   </style>
   <header class="header-back">
     <div class="col-sm-3 fondo-img">
-      <img src="http://i63.tinypic.com/azgvtd.png " alt="dime-tu-traba">
+      <a href="index.html"><img src="http://i63.tinypic.com/azgvtd.png" class="img-logo" alt="dime-tu-traba"></a>
     </div>
     <div class="col-sm-5 col-sm-offset-3 text-right header-text">
       <h3>¡Ayúdanos a identificar las trabas que se te presentan en tu día a día!</h3>
     </div>
   </header>
+  <div class="container">
+    <div class="row">
+      <div id="piechart" class="col-md-6 col-sm-6 col-xs-12 hidden-responsive" style=" height: 442px; background-color: white;"></div>
+      <div id="piechart_3d" class="col-md-6 col-sm-6 col-xs-12 hidden-responsive" style=" height: 442px; background-color: white;"></div>
+    </div>
+  </div>
+  <div id="footer">
+      <div class="container">
+          <div class="row">
+          <div class="col-md-4 col-sm-4 col-xs-12 hidden-responsive">
+              <a href="http://www.produce.gob.pe/"><img src="http://i68.tinypic.com/96gw9w.jpg" alt="logo ministerio de produccion" class="img-responsive"></a>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+              <p class="copyright">Copyright © 2016 Ministerio de la Producción.</p>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12 hidden-responsive">
+              <a href="javascritp:;" class="preguntas-frecuentes" onclick="fn_preguntas();">Preguntas frecuentes</a>
+            <a href="paginas-relacionadas.html" class="pregunta-relacionada">Páginas relacionadas</a>
+          </div>           
+          </div>
+      </div>
+    </div>
+
 	<script type="text/javascript">
   const BASE_URL = "http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/";
   </script>
@@ -185,11 +385,9 @@
         var options = {
           title: 'Total de registros =' +  " " + totalRegistrosEntidades
         };
-        var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
       chart.draw(data, options);
       }
     </script>	
-    <div id="piechart" style="width: 900px; height: 500px;"></div>
-    <div id="piechart2" style="width: 900px; height: 500px;"></div>
   </body>
 </html>
