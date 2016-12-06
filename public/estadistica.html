@@ -38,9 +38,9 @@
       font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     } 
     #footer{
-          position: absolute;
-          width: 100vw;
-          bottom: 0;
+      width: 100vw;
+      bottom: 0;
+      position: relative;
     }
     .img-alert{
       width: 40%;
@@ -320,11 +320,11 @@
       var cantidadRegistro = (numRegistrosInvalidos*100)/totalRegistros;
       var dataGrafico = [
         ["Descripcion", "Cantidad"], 
-        ["Invalido",     numRegistrosInvalidos], 
-        ["Validos",      numRegistrosValidos],
-        ["No es Traba",  numRegistrosNoTraba],
-        ["Invalido Repetido",  numRegistrosInvalidoRepetido],
-        ["Queja",  numRegistrosQueja]
+        ["Invalido", numRegistrosInvalidos], 
+        ["Validos", numRegistrosValidos],
+        ["No es Traba", numRegistrosNoTraba],
+        ["Invalido Repetido", numRegistrosInvalidoRepetido],
+        ["Queja", numRegistrosQueja]
       ]
     //y agregro el array al metodo de googlechart
 
@@ -375,14 +375,14 @@
         ["Descripcion", "Cantidad"], 
         ["nacion", numRegistrosNacion], 
         ["Hospitales", numRegistrosHospitales],
-        ["INDECOPI", numRegistrosIndecopi],
+        ["Indecopi", numRegistrosIndecopi],
         ["SUNAT", numRegistrosSunat],
         ["SENASA", numRegistrosSenasa],
         ["banco", numRegistrosMinisterio],
         ["Ministerio", numRegistrosMunicipalidad],
         ["municipalidad", numRegistrosRegistro],
         ["Registro", numRegistrosSenasa],
-        ["MINISTERIO", numRegistrosMini]
+        ["Ministerio", numRegistrosMini]
       ]
     //y agregro el array al metodo de googlechart
 
