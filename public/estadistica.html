@@ -83,13 +83,12 @@
   <script type="text/javascript">
     google.charts.load('current', {'packages':['corechart']});
     google.charts.setOnLoadCallback(drawChart);
-    
     function drawChart(){
-      $.getJSON( "demo.json", function( data ) {
+      $.getJSON( "demo.json", function(data) {
       traba(data);
+      trabaEntidad(data);
       });
     }
-    
     function traba(dataReporte){
       var listaRegistrosReporte = dataReporte["Hoja1"];
       var numRegistrosInvalidos = 0;
@@ -132,8 +131,65 @@
       chart.draw(data, options);
       }
 
+    function trabaEntidad(entidad){
+      var listaRegistrosEntidades = entidad["Hoja1"];
+      var numRegistrosNacion = 0;
+      var numRegistrosHospitales = 0;
+      var numRegistrosIndecopi = 0;
+      var numRegistrosSunat = 0;
+      var numRegistrosBanco = 0;
+      var numRegistrosMinisterio = 0;
+      var numRegistrosMunicipalidad = 0;
+      var numRegistrosRegistro = 0;
+      var numRegistrosSenasa = 0;
+      var numRegistrosMini = 0;
+      var totalRegistrosEntidades = 0;
+      //recorro todos los registros de la hoja1
+      listaRegistrosEntidades.forEach(function(registro){
+        console.log(registro);
+        console.log(registro.id_detalle);//prueba 
+        console.log(registro.detalle_oficina);
+        switch(registro.detalle_oficina){ //segun su descripcion, aumento el contador que corresponda
+          case "nacion": numRegistrosNacion++; break; 
+          case "Hospitales": numRegistrosHospitales ++; break; 
+          case "INDECOPI":numRegistrosIndecopi++;break;
+          case "SUNAT":numRegistrosSunat++;break;
+          case "banco":numRegistrosBanco++;break;
+          case "Ministerio":numRegistrosMinisterio++;break;
+          case "municipalidad":numRegistrosMunicipalidad++;break;
+          case "Registro":numRegistrosRegistro++;break;
+          case "SENASA":numRegistrosSenasa++;break;
+          case "MINISTERIO":numRegistrosMini++;break;
+          default:;
+        }
+      });
+      totalRegistrosEntidades =  numRegistrosNacion + numRegistrosHospitales + numRegistrosIndecopi + numRegistrosSunat  + numRegistrosBanco + numRegistrosMinisterio + numRegistrosMunicipalidad + numRegistrosRegistro + numRegistrosSenasa + numRegistrosMini ;
+
+      var cantidadRegistro = (numRegistrosNacion*100)/totalRegistrosEntidades;
+      var dataGrafico = [
+        ['Descripcion', 'Cantidad'], 
+        ['nacion', numRegistrosNacion], 
+        ['Hospitales', numRegistrosHospitales],
+        ['INDECOPI', numRegistrosIndecopi],
+        ['SUNAT', numRegistrosSunat],
+        ['SENASA', numRegistrosSenasa],
+        ['banco', numRegistrosMinisterio],
+        ['Ministerio', numRegistrosMunicipalidad],
+        ['municipalidad', numRegistrosRegistro],
+        ['Registro', numRegistrosSenasa],
+        ['MINISTERIO', numRegistrosMini]
+      ]
+    //y agregro el array al metodo de googlechart
+
+      var data = google.visualization.arrayToDataTable(dataGrafico);
+        var options = {
+          title: 'Total de registros =' +  " " + totalRegistrosEntidades
+        };
+        var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+      chart.draw(data, options);
+      }
     </script>	
     <div id="piechart" style="width: 900px; height: 500px;"></div>
-    <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+    <div id="piechart2" style="width: 900px; height: 500px;"></div>
   </body>
 </html>
