@@ -1,0 +1,19 @@
+table.dataTable th {	
+	background-color:#CC0000;
+	color:#FFF;
+	font-weight:500;
+}
+table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:after
+{
+color: #fff;
+}
+.pagination>.active>a, 
+.pagination>.active>a:focus, 
+.pagination>.active>a:hover, 
+.pagination>.active>span, 
+.pagination>.active>span:focus, 
+.pagination>.active>span:hover
+{
+background-color: #595A5C;
+border-color: #595A5C;
+}
