@@ -36,7 +36,9 @@
 	</head>
 	<body>
 		<style type="text/css">
-		  /*  body { margin: 30px; }  */	
+		  body { 
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+      }	
 			.img-alert{
 				width: 40%;
 				margin: 2rem 18rem;
@@ -117,9 +119,9 @@
 			}
 		  /*formulario*/
 		  #mensaje-condicion{
-			text-align: center;
-			font-style: italic;
-			padding: 1.5rem;
+  			text-align: center;
+  			font-style: italic;
+  			padding: 1.5rem;
 		  }
 
 		 /*section btn*/
@@ -143,7 +145,6 @@
 				background: #737373;
 			} 
 			.text-form{
-				margin: 4rem;
 				line-height: 2rem;
 			}
 			.text-form h3 {
@@ -153,43 +154,49 @@
 				text-decoration: none;
 				color: #ffffff;
 				position: absolute;
-				right: -4%;
+				right: 16%;
 				margin-top: 5rem;
 			}
 			#form-traba {
 				padding: 2rem 4rem;
+        font-size: 1.2em;
 			}
 			#footer {
 				background:#FF3C09;
 				color: #FFFFFF;
 			  }
 			#footer .img-responsive {
-			width: 65%;
-			margin: 1.5rem 5rem;
+			  width: 65%;
+			  margin: 1.5rem 5rem;
 		  }
 			.copyright {
-				margin-top: 4rem;
+				margin-top: 2.5rem;
+        text-align: center;
 			}
-			#footer .preguntas-frecuentes{
 			#footer .copyright{
 				text-align: center;
 				margin: 3rem;  
 			}
+      #footer .preguntas-frecuentes{
 				text-decoration: none;
 				color: #ffffff;
 				position: absolute;
-				right: -4%;
+				right: 16%;
 				margin-top: 2rem;
 			}
 			/*responsive*/
 			@media screen and (max-width: 767px) {
-				.header-back {
+				.img-alert{
+          width: 50%;
+          margin: 2rem 6.5rem;
+        }
+        .header-back {
 					height: 19.6rem;
 				}
 				.header-back h3 {
 					color: white;
 					font-size: 1em;
-          			margin: 1.5rem;
+          margin: 1.5rem;
 					text-align: center;
 				}
 				.header-back {
@@ -215,6 +222,7 @@
 				.text-form h3 {
 					line-height: 1.5;
 					font-size: 1em;
+          padding: 1.5rem;
 				}
 				.hidden-responsive{
 					position: relative;
@@ -248,7 +256,7 @@
 				 	<div class="col-sm-12 menu-btn">
 						<button type="button" class="btn option-btn btn1 col-sm-12 col-md-12 col-lg-3" data-toggle="modal" data-target="#alert-traba">¿Qué es una traba?</button>
 						<button type="button" class="btn option-btn col-sm-12 col-md- col-lg-3" data-toggle="modal" data-target="#alert-denuncia">¿Tienes una denuncia y/o reclamo?</button>
-					 	<button type="button" href="estadistica.html" class="btn option-btn col-sm-12 col-md-3 col-lg-3">¡Mira las estadísticas!</button>
+					 	<a href="estadistica.html"><button type="button" class="btn option-btn col-sm-12 col-md-3 col-lg-3">¡Mira las estadísticas!</button></a>
 				  	</div>
 			  	</div>
 		  	</div>
@@ -256,10 +264,17 @@
 		<section>
 			<div class="container">
 				<div class="row">
+<<<<<<< HEAD
 				  	<div class="text-form col-sm-12">
 					  	<h1>Dime tu traba</h1>
 					  	<h3>Todo trámite, procedimiento o requisito que te parezca autoritario, innecesario y/o repetitivo, puedes registrarlo en el siguiente formulario. Esta información será alcanzada a todas las instancias y autoridades relevantes y necesarias para su análisis y propuesta de mejora.</h3>
 				  	</div>
+=======
+					  	<div class="text-form col-sm-12">
+						  	<h1 class="text-center">Dime tu traba</h1>
+						  	<h3 class="text-justify">Todo trámite, procedimiento o requisito que te parezca autoritario, innecesario y/o repetitivo, puedes registrarlo en el siguiente formulario. Esta información será alcanzada a todas las instancias y autoridades relevantes y necesarias para su análisis y propuesta de mejora.</h3>
+					  	</div>
+>>>>>>> a16da94dc01b91c155d67647bba5b387181610f1
 				</div>
 			</div>
 		</section>
@@ -385,12 +400,12 @@
 					<div id="errors"></div>
 					<div id="mensaje-condicion">
 						  <p>No nos podemos comprometer a que todas las trabas podrán ser atendidas y superadas pero estamos seguros que el primer paso es su identificación.</p>
-						<p>Si lo tuyo es una queja, te sugerimos revises estás páginas. <a href="">Clic aquí</a></p>
+						<p>Si tu traba es un reclamo o una denuncia, te sugerimos revises estas páginas. <a href="paginas-relacionadas.html">Clic aquí</a></p>
 					</div> 
 					<div class="row form-group ">
 						<div class="col-sm-12 text-center">
-							<button type="button" class="btn btn-primary btn-md" onclick="fn_enviarTraba();"> Enviar </button>       
-							<button type="button" class="btn btn-default btn-md" onclick="fn_cancelar();"> Cancelar </button>                            
+							<button type="button" class="btn btn-primary" onclick="fn_enviarTraba();"> Enviar </button>       
+							<button type="button" class="btn btn-default" onclick="fn_cancelar();"> Cancelar </button>                            
 						</div>
 					</div>     
 				</form>
@@ -400,7 +415,7 @@
 			<div class="container">
 		  		<div class="row">
 					<div class="col-md-4 col-sm-4 col-xs-12 hidden-responsive">
-			  			<img src="http://i68.tinypic.com/96gw9w.jpg" alt="logo ministerio de produccion" class="img-responsive">
+			  			<a href="http://www.produce.gob.pe/"><img src="http://i68.tinypic.com/96gw9w.jpg" alt="logo ministerio de produccion" class="img-responsive"></a>
 					</div>
 					<div class="col-md-4 col-sm-4 col-xs-12">
 			  			<p class="copyright">Copyright © 2016 Ministerio de la Producción.</p>
@@ -512,7 +527,7 @@
 				return str.length >= max ? str.substring(0, max): str;
 			}
 			function fn_cancelar(){
-				location.href = "http://www.dimetutraba.pe/";
+				location.href = "index.html";
 			}
 			function fn_mensajeFinal(id_traba){
 				var theResponse = null;

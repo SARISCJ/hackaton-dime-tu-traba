@@ -43,16 +43,24 @@
 				background-color: #FF3C09;
 				height: 13.6rem;
 			}
-			.fondo-img img{
-				margin-top: -14rem;
-			}
 			.fondo-img {
 				height: 0;
 				border-top: 13.6rem solid #fff;
 				border-right: 21rem solid transparent;
 			}
+			.fondo-img img{
+				margin-top: -14rem;
+			}
+			.tit-pag-rel{
+				color: white;
+				padding-top: 3rem;
+			}
+			.conte-img:hover{
+				background-color: rgba(145, 132, 132, 0.44);
+			}
 			#pag-section{
 				text-align: center;
+				margin: 0.5rem;
 			}
 			.otras-paginas{
 				width: 100%;
@@ -91,12 +99,16 @@
 					margin-left: 0;
 					margin-right: 0;
 				}
+				.tit-pag-rel {
+					padding-top: 0; 
+					font-size: 1em;
+				}
 				.menu-btn{
 					text-align: center;
 				}
-		        .img-logo{
-		          margin: 1rem 11rem;
-		        }
+				.img-logo {
+					margin: 1rem 10rem;
+				}
 		        .fondo-img {
 		          height: 0;
 		          border-right: 0rem solid transparent;            
@@ -112,24 +124,26 @@
 		  	<div class="col-sm-3 fondo-img">
 				<a href="index.html"><img src="http://i63.tinypic.com/azgvtd.png" class="img-logo" alt="dime-tu-traba"></a>
 			</div>
+			<div class="col-sm-9">
+				<h2 class="tit-pag-rel text-right">Páginas dónde podrás hacer tus denuncias, quejas o reclamos</h2>
+			</div>
 	  	</header>
 		<section id="pag-section">
 			<div class="container">
-				<h1>Páginas dónde podrás hacer tus denuncias, quejas o reclamos</h1>
-				<h3>¿Lo tuyo es una traba? <a href="index.html">Clic aquí</a></h3>
+				<h3>¿Es una traba? <a href="index.html">Clic aquí</a></h3>
 				<div class="row">
-					<div class="col-md-4">
-						<img class="otras-paginas" src="http://i65.tinypic.com/122mg0i.jpg">
+					<div class="col-md-4 col-conte-img">
+						<a href="http://www.trabajo.gob.pe/SDL/"><img class="otras-paginas" src="http://i65.tinypic.com/122mg0i.jpg"></a>
 						<h2>Ministerio de trabajo y promoción del empleo</h2>
 						<p>Sistema de denuncias en Lima</p>
 					</div>
-					<div class="col-md-4">
-						<img class="otras-paginas" src="http://i65.tinypic.com/122mg0i.jpg">
+					<div class="col-md-4 conte-img">
+						<a href="http://www.sunat.gob.pe/institucional/contactenos/virtual_materia_libro.html"><img class="otras-paginas" src="http://i67.tinypic.com/2akbdpl.jpg"></a>
 						<h2>SUNAT</h2>
 						<p>Para Consultar el estado de su Queja Reclamo o Sugerencia</p>						
 					</div>
-					<div class="col-md-4">
-						<img class="otras-paginas" src="http://i65.tinypic.com/122mg0i.jpg">
+					<div class="col-md-4 conte-img">
+						<a href="https://www.indecopi.gob.pe/libro-de-reclamaciones"><img class="otras-paginas" src="http://i64.tinypic.com/67kqq9.jpg"></a>
 						<h2>Indecopi</h2>
 						<p>Libro de Reclamaciones</p>						
 					</div>
@@ -140,7 +154,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4 col-sm-4 col-xs-12 hidden-responsive">
-						<img src="http://i68.tinypic.com/96gw9w.jpg" alt="logo ministerio de produccion" class="img-responsive">
+			  			<a href="http://www.produce.gob.pe/"><img src="http://i68.tinypic.com/96gw9w.jpg" alt="logo ministerio de produccion" class="img-responsive"></a>
 					</div>
 					<div class="col-md-4 col-sm-4 col-xs-12">
 						<p class="copyright">Copyright © 2016 Ministerio de la Producción.</p>
