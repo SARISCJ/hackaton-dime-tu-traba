@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/DataTables-1.10.12/extensions/Responsive/css/responsive.bootstrap.min.css" />  
   <link rel="stylesheet" href="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/DataTables-1.10.12/media/css/dataTables.bootstrap.partial.css" />  
   <link rel="stylesheet" href="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/bootstrap-datepicker-1.6.1-dist/css/bootstrap-datepicker3.min.css" />          
-  <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,200,300,500,700,800' rel='stylesheet' type='text/css'> 
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,200,300,500,700,800" rel="stylesheet" type="text/css"> 
 	<link rel="stylesheet" href="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/views/layout/default/css/site.css" /> 
   <!--JS--> 
 
@@ -281,7 +281,7 @@
   const BASE_URL = "http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/";
   </script>
   <script type="text/javascript">
-    google.charts.load('current', {'packages':['corechart']});
+    google.charts.load("current", {"packages":["corechart"]});
     google.charts.setOnLoadCallback(drawChart);
     function drawChart(){
       $.getJSON( "demo.json", function(data) {
@@ -314,20 +314,20 @@
       totalRegistros =  numRegistrosInvalidos + numRegistrosValidos + numRegistrosNoTraba + numRegistrosInvalidoRepetido + numRegistrosQueja;
       var cantidadRegistro = (numRegistrosInvalidos*100)/totalRegistros;
       var dataGrafico = [
-        ['Descripcion', 'Cantidad'], 
-        ['Invalido',     numRegistrosInvalidos], 
-        ['Validos',      numRegistrosValidos],
-        ['No es Traba',  numRegistrosNoTraba],
-        ['Invalido Repetido',  numRegistrosInvalidoRepetido],
-        ['Queja',  numRegistrosQueja]
+        ["Descripcion", "Cantidad"], 
+        ["Invalido",     numRegistrosInvalidos], 
+        ["Validos",      numRegistrosValidos],
+        ["No es Traba",  numRegistrosNoTraba],
+        ["Invalido Repetido",  numRegistrosInvalidoRepetido],
+        ["Queja",  numRegistrosQueja]
       ]
     //y agregro el array al metodo de googlechart
 
       var data = google.visualization.arrayToDataTable(dataGrafico);
         var options = {
-          title: 'Total de registros =' +  " " + totalRegistros
+          title: "Total de registros =" +  " " + totalRegistros
         };
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        var chart = new google.visualization.PieChart(document.getElementById("piechart"));
       chart.draw(data, options);
       }
 
@@ -367,25 +367,25 @@
 
       var cantidadRegistro = (numRegistrosNacion*100)/totalRegistrosEntidades;
       var dataGrafico = [
-        ['Descripcion', 'Cantidad'], 
-        ['nacion', numRegistrosNacion], 
-        ['Hospitales', numRegistrosHospitales],
-        ['INDECOPI', numRegistrosIndecopi],
-        ['SUNAT', numRegistrosSunat],
-        ['SENASA', numRegistrosSenasa],
-        ['banco', numRegistrosMinisterio],
-        ['Ministerio', numRegistrosMunicipalidad],
-        ['municipalidad', numRegistrosRegistro],
-        ['Registro', numRegistrosSenasa],
-        ['MINISTERIO', numRegistrosMini]
+        ["Descripcion", "Cantidad"], 
+        ["nacion", numRegistrosNacion], 
+        ["Hospitales", numRegistrosHospitales],
+        ["INDECOPI", numRegistrosIndecopi],
+        ["SUNAT", numRegistrosSunat],
+        ["SENASA", numRegistrosSenasa],
+        ["banco", numRegistrosMinisterio],
+        ["Ministerio", numRegistrosMunicipalidad],
+        ["municipalidad", numRegistrosRegistro],
+        ["Registro", numRegistrosSenasa],
+        ["MINISTERIO", numRegistrosMini]
       ]
     //y agregro el array al metodo de googlechart
 
       var data = google.visualization.arrayToDataTable(dataGrafico);
         var options = {
-          title: 'Total de registros =' +  " " + totalRegistrosEntidades
+          title: "Total de registros =" +  " " + totalRegistrosEntidades
         };
-        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        var chart = new google.visualization.PieChart(document.getElementById("piechart_3d"));
       chart.draw(data, options);
       }
     </script>	
