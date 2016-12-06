@@ -13,7 +13,7 @@
 		<link rel="stylesheet" href="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/DataTables-1.10.12/extensions/Responsive/css/responsive.bootstrap.min.css" />  
 		<link rel="stylesheet" href="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/DataTables-1.10.12/media/css/dataTables.bootstrap.partial.css" />  
 		<link rel="stylesheet" href="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/bootstrap-datepicker-1.6.1-dist/css/bootstrap-datepicker3.min.css" />          
-		<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,200,300,500,700,800' rel='stylesheet' type='text/css'>    
+		<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,200,300,500,700,800' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/views/layout/default/css/site.css" /> 
 		<link rel="shortcut icon" href="favicon.ico">    
 
@@ -31,183 +31,185 @@
 		<script type="text/javascript" src="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/jquery.inputmask/inputmask.js"></script>
 		<script type="text/javascript" src="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/plugin-paginate/responsive-paginate.js"></script>
 		<script type="text/javascript" src="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/libs/bootbox/bootbox.js"></script>
-		<script type="text/javascript"> const BASE_URL = "http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/";
-		  </script>
+		<script type="text/javascript"> const BASE_URL = "http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/";</script>
+    <script src="https://use.fontawesome.com/d24cc37567.js"></script>
 	</head>
-<body>
-    <style type="text/css">
-      @import url(//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css);
-     /*  body { margin: 30px; }  */
+	<body>
+		<style type="text/css">
+		  /*  body { margin: 30px; }  */
+			.img-alert{
+         width: 40%;
+         margin: 2rem 18rem;
+      }
       input[type=radio].with-font,
-      input[type=checkbox].with-font {
-        border: 0;
-        clip: rect(0 0 0 0);
-        height: 1px;
-        margin: -1px;
-        overflow: hidden;
-        padding: 0;
-        position: absolute;
-        width: 1px;
-      }
-
-      input[type=radio].with-font ~ label:before,
-      input[type=checkbox].with-font ~ label:before {
-        font-family: FontAwesome;
-        display: inline-block;
-        content: "\f1db";
-        letter-spacing: 10px;
-        font-size: 1.2em;
-        color: #535353;
-        width: 1.4em;
-      }
-
-      input[type=radio].with-font:checked ~ label:before,
-      input[type=checkbox].with-font:checked ~ label:before  {
-        content: "\f00c";
-        font-size: 1.2em;
-        color: #FF3E16;
-        letter-spacing: 5px;
-      }
-      input[type=checkbox].with-font ~ label:before {        
-        content: "\f096";
-      }
-      input[type=checkbox].with-font:checked ~ label:before {
-        content: "\f046";        
-        color: #FF3E16;
-      }
-      input[type=radio].with-font:focus ~ label:before,
-      input[type=checkbox].with-font:focus ~ label:before,
-      input[type=radio].with-font:focus ~ label,
-      input[type=checkbox].with-font:focus ~ label
-      {                
-        color: #FF3E16;
-      }
-      textarea{resize:none;}
-      .itemTitle{
-        display:none; 
-      }
-      .lower{
-        text-transform:lowercase !important;
-      }
-      .upper{
-        text-transform:uppercase !important;
-      }
-      	.asterisco{
-        color:#F00 !important;
-        font-weight:bold;
-      }
-		.header-back{
-			background-color: #FF3C09;
-			height: 13.6rem;
-		}
-		.header-back h3 {
-			color: white;
-			margin-top: 4rem;
-		}
-		.fondo-img img{
-			margin-top: -14rem;
-		}
-		.fondo-img {
-			height: 0;
-			border-top: 13.6rem solid #fff;
-			border-right: 21rem solid transparent;
-		}
-		/*section btn*/
-		.section-btn{
-			background: #F6F8F7;
-		}
-		.option-btn {
-			border-radius: 1rem;
-			background: #FF3C09;
-			color: white !important;
-			font-size: 1.12em;
-			margin: 4.5rem;
-			padding: 2rem;
-		}
-		.btn:hover, .btn:focus {
-			text-decoration: none;
-			background: #e60606;
-		}
-		.text-form{
-			margin: 4rem;
-			line-height: 2rem;
-		}
-		.text-form h3 {
-			line-height: 1.4;
-		}
-      	#footer {
-			background:#FF3C09;
-			color: #FFFFFF;
-		  }
-      	#footer .img-responsive {
-        	width: 65%;
-        	margin: 1.5rem 5rem;
-      	}
-      	#footer .copyright{
-			text-align: center;
-			margin: 3rem;  
-		}
-      	#footer .preguntas-frecuentes{
-			margin: 2.8rem;
-			text-decoration: none;
-			color: #ffffff;
-			position: absolute;
-			right: 4%;
-		}
-		/*responsive*/
-		@media screen and (max-width: 767px) {
-			.header-back {
-				height: 19.6rem;
+			input[type=checkbox].with-font {
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+			input[type=radio].with-font ~ label:before,
+			input[type=checkbox].with-font ~ label:before {
+				font-family: FontAwesome;
+				display: inline-block;
+				content: "\f1db";
+				letter-spacing: 10px;
+				font-size: 1.2em;
+				color: #535353;
+				width: 1.4em;
+			}
+			input[type=radio].with-font:checked ~ label:before,
+			input[type=checkbox].with-font:checked ~ label:before  {
+				content: "\f00c";
+				font-size: 1.2em;
+				color: #FF3E16;
+				letter-spacing: 5px;
+			}
+			input[type=checkbox].with-font ~ label:before {        
+				content: "\f096";
+			}
+			input[type=checkbox].with-font:checked ~ label:before {
+				content: "\f046";        
+				color: #FF3E16;
+			}
+			input[type=radio].with-font:focus ~ label:before,
+			input[type=checkbox].with-font:focus ~ label:before,
+			input[type=radio].with-font:focus ~ label,
+			input[type=checkbox].with-font:focus ~ label{                
+				color: #FF3E16;
+			}
+			textarea{resize:none;}
+			.itemTitle{
+				display:none; 
+			}
+			.lower{
+				text-transform:lowercase !important;
+			}
+			.upper{
+				text-transform:uppercase !important;
+			}
+			.asterisco{
+				color:#F00 !important;
+				font-weight:bold;
+			}
+			.header-back{
+				background-color: #FF3C09;
+				height: 13.6rem;
 			}
 			.header-back h3 {
 				color: white;
-				font-size: 1em;
-				text-align: center;
+				margin-top: 4rem;
 			}
-			.header-back {
-				margin-left: 0;
-				margin-right: 0;
-			}
-			.menu-btn{
-				text-align: center;
+			.fondo-img img{
+				margin-top: -14rem;
 			}
 			.fondo-img {
-				border-top: 12.6rem solid #fff;
-				border-right: 18rem solid transparent;
+				height: 0;
+				border-top: 13.6rem solid #fff;
+				border-right: 21rem solid transparent;
+			}
+		 /*section btn*/
+			.section-btn{
+				background: #F6F8F7;
 			}
 			.option-btn {
-				font-size: 0.9em;
-				margin: 0.6rem;
-				padding: 1rem;
+				border-radius: 1rem;
+				background: #FF3C09;
+				color: white !important;
+				font-size: 1.12em;
+				margin: 4.5rem;
+				padding: 2rem;
 			}
-			.option-btn:nth-child(1){
-				margin-top: 5rem;
+			.btn:hover, .btn:focus {
+				text-decoration: none;
+				background: #e60606;
+			}
+			.text-form{
+				margin: 4rem;
+				line-height: 2rem;
 			}
 			.text-form h3 {
-				line-height: 1.5;
-				font-size: 1em;
+				line-height: 1.4;
 			}
-			.hidden-responsive{
-			  position: relative;
-			  height: 0;
-			  overflow: hidden;
-			  -webkit-transition-timing-function: ease;
-			  -o-transition-timing-function: ease;
-			  transition-timing-function: ease;
-			  -webkit-transition-duration: .35s;
-			  -o-transition-duration: .35s;
-			  transition-duration: .35s;
-			  -webkit-transition-property: height, visibility;
-			  -o-transition-property: height, visibility;
-			  transition-property: height, visibility;
+			#form-traba {
+				padding: 2rem 4rem;
 			}
-      	}
-    </style>
-
-	  	<header class="header-back">
+			#footer {
+			background:#FF3C09;
+			color: #FFFFFF;
+		  }
+			#footer .img-responsive {
+			width: 65%;
+			margin: 1.5rem 5rem;
+		  }
+			#footer .copyright{
+				text-align: center;
+				margin: 3rem;  
+			}
+			#footer .preguntas-frecuentes{
+			   margin: 2.8rem;
+			   text-decoration: none;
+			   color: #ffffff;
+			   position: absolute;
+			   right: 4%;
+			}
+			/*responsive*/
+			@media screen and (max-width: 767px) {
+				.header-back {
+					height: 19.6rem;
+				}
+				.header-back h3 {
+					color: white;
+					font-size: 1em;
+					text-align: center;
+				}
+				.header-back {
+					margin-left: 0;
+					margin-right: 0;
+				}
+				.menu-btn{
+					text-align: center;
+				}
+				.fondo-img {
+					border-top: 12.6rem solid #fff;
+					border-right: 18rem solid transparent;
+				}
+				.option-btn {
+					font-size: 0.9em;
+					margin: 0.6rem;
+					padding: 1rem;
+				}
+				.btn1{
+					margin-top: 5rem;
+				}
+				.text-form h3 {
+					line-height: 1.5;
+					font-size: 1em;
+				}
+				.hidden-responsive{
+					position: relative;
+					height: 0;
+					overflow: hidden;
+					-webkit-transition-timing-function: ease;
+					-o-transition-timing-function: ease;
+					transition-timing-function: ease;
+					-webkit-transition-duration: .35s;
+					-o-transition-duration: .35s;
+					transition-duration: .35s;
+					-webkit-transition-property: height, visibility;
+					-o-transition-property: height, visibility;
+					transition-property: height, visibility;
+				}
+			}
+		</style>
+		<header class="header-back">
 		  	<div class="col-sm-3 fondo-img">
-			  	<img src="http://i63.tinypic.com/azgvtd.png " alt="dime-tu-traba">
-		  	</div>
+				<img src="http://i63.tinypic.com/azgvtd.png " alt="dime-tu-traba">
+			</div>
 		  	<div class="col-sm-5 col-sm-offset-3 text-right header-text">
 				<h3>¡Ayúdanos a identificar las trabas que se te presentan en tu día a día!</h3>
 		  	</div>
@@ -216,9 +218,11 @@
 		  	<div class="container">
 			  	<div class="row">
 				  	<div class="col-sm-12 menu-btn">
-					  	<button type="button" class="btn option-btn col-sm-12 col-md-12 col-lg-3">¿Qué es una traba?</button>
-					  	<button type="button" class="btn option-btn col-sm-12 col-md- col-lg-3">¿Tienes una denuncia y/o reclamo?</button>
-					  	<button href="estadistica.html" type="button" class="btn option-btn col-sm-12 col-md-3 col-lg-3">¡Mira las estadìsticas!</button>
+						<button type="button" class="btn option-btn btn1 col-sm-12 col-md-12 col-lg-3" data-toggle="modal" data-target="#alert-traba">¿Qué es una traba?</button>
+						<button type="button" class="btn option-btn col-sm-12 col-md- col-lg-3" data-toggle="modal" data-target="#alert-denuncia">¿Tienes una denuncia y/o reclamo?</button>
+					  	<a href="estadistica.html">
+					  		<button type="button" class="btn option-btn col-sm-12 col-md-3 col-lg-3">¡Mira las estadìsticas!</button>
+					  	</a>
 				  	</div>
 			  	</div>
 		  	</div>
@@ -233,120 +237,139 @@
 			  	</div>
 		  	</div>
 	 	</section>
-      	<div class="container">
-        	<form class="" id="form-traba">
-          		<div class="row form-group">
-            	<label class="col-sm-4 form-control-label text-right"><b>¿Dónde encontraste una traba?</b><span class="asterisco">(*)</span></label>               
-            	<div class="col-sm-8">
-              <select class = "form-control input-sm" id="cboEntidad" name="Traba[entidad]"> 
-               <option value="0">SELECCIONE</option><option value="2">GOBIERNO REGIONAL</option><option value="1">MINISTERIO</option><option value="3">MUNICIPALIDAD</option><option value="82">ORGANISMOS AUTÓNOMOS</option><option value="4">OTRO</option>          </select>   
-
-             </div>
-           </div>
-           <div class="row form-group hidden entidad">
-            <label class="col-sm-4 form-control-label text-right"><b>¿En que entidad?</b><span class="asterisco">(*)</span></label>               
-            <div class="col-sm-8">
-             <select class = "form-control input-sm" id="cboEntidadDetalle" name="Traba[detalle_entidad]"> 
-              <option value="0">SELECCIONE</option>               
-            </select>              
-          </div>
-        </div>
-        <div class="row form-group hidden nivel3">
-          <label class="col-sm-4 form-control-label text-right"><b>¿En que organismo?</b></label>               
-          <div class="col-sm-8">
-           <select class = "form-control input-sm" id="cboDetalle3" name="Traba[detalle3]"> 
-            <option value="0">SELECCIONE</option>               
-          </select>              
-        </div>
-      </div>
-
-      <div class="ubigeo">
-       <div class="row form-group hidden">
-        <label class="col-sm-4 form-control-label text-right"><b>Departamento:</b></label>               
-        <div class="col-sm-8">
-         <select class = "form-control input-sm" id="departamento" name="Traba[departamento]"> 
-           <option value="0">SELECCIONE</option><option value="01">AMAZONAS</option><option value="02">ANCASH</option><option value="03">APURIMAC</option><option value="04">AREQUIPA</option><option value="05">AYACUCHO</option><option value="06">CAJAMARCA</option><option value="07">CALLAO</option><option value="08">CUSCO</option><option value="09">HUANCAVELICA</option><option value="10">HUANUCO</option><option value="11">ICA</option><option value="12">JUNIN</option><option value="13">LA LIBERTAD</option><option value="14">LAMBAYEQUE</option><option value="15">LIMA</option><option value="16">LORETO</option><option value="17">MADRE DE DIOS</option><option value="18">MOQUEGUA</option><option value="19">PASCO</option><option value="20">PIURA</option><option value="21">PUNO</option><option value="22">SAN MARTIN</option><option value="23">TACNA</option><option value="24">TUMBES</option><option value="25">UCAYALI</option>           
-         </select>              
-       </div>
-     </div>
-
-     <div class="row form-group hidden">
-      <label class="col-sm-4 form-control-label text-right"><b>Provincia:</b></label>               
-      <div class="col-sm-8">
-        <select class = "form-control input-sm" id="provincia" name="Traba[provincia]"> 
-          <option value="0">SELECCIONE</option>                    
-        </select> 
-      </div>
-    </div>
-
-    <div class="row form-group hidden">
-      <label class="col-sm-4 form-control-label text-right"><b>Distrito:</b></label>               
-      <div class="col-sm-8">
-        <select class = "form-control input-sm" id="distrito" name="Traba[distrito]"> 
-          <option value="0">SELECCIONE</option>            
-        </select>              
-      </div>
-    </div>
-  </div>
-
-  <div class="row form-group oficina hidden">
-    <label class="col-sm-4 form-control-label text-right "><b>En que Oficina</b></label>               
-    <div class="col-sm-8">
-      <input class="form-control input-sm upper" type="text" name="Traba[oficina]"/>              
-    </div>
-  </div>
-
-  <div class="row form-group hidden">
-    <label class="col-sm-4 form-control-label text-right "><b>Correo electrónico</b></label>               
-    <div class="col-sm-8">
-      <input class="form-control input-sm lower" type="text" name="Traba[correo]"/>              
-    </div>
-  </div>
-  <div class="row form-group">
-    <label class="col-sm-4 form-control-label text-right">
-    <b>Brevemente, cuéntanos en qué consistió tu traba (máximo 300 caracteres)</b><span class="asterisco">(*)</span></label>               
-    <div class="col-sm-8">
-     <textarea class="form-control" rows="4" name="Traba[comentario]" id="comentario"/> </textarea>  
-     <!--<h6 class="pull-right">0/200</h6>-->
-    </div>
-  </div>    
-
-  <div class="row form-group">
-    <label class="col-sm-4 form-control-label text-right"><b>Esto te afecta como:</b><span class="asterisco">(*)</span>:</label> 
-    <div class="col-sm-2" style="">
-      <input id="question1" name="Traba[tipo_persona]" type="radio" class="with-font" value="EMPRESA" />
-      <label for="question1">Empresa</label>
-    </div>
-    <div class="col-sm-6">
-      <input id="question2" name="Traba[tipo_persona]" type="radio" class="with-font" value="PERSONA" />
-      <label for="question2">Persona</label>
-    </div>
-  </div>
-
-  <div class="row form-group">
-    <label class="col-sm-4 form-control-label text-left"><span class="asterisco">(*)</span> Datos obligatorios.</label>
-
-              <!--<label class="col-sm-8 form-control-label text-right"><a href="javascritp:;" onclick="fn_preguntas();">
-              <img src="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/public/img//preguntas.png"></a></label>-->
-              <label class="col-sm-8 form-control-label text-right"><a href="javascritp:;" onclick="fn_preguntas();" style="color:#7F7F7F;"><u>Preguntas frecuentes</u></a></label>            
-            </div>  
-
-            <hr>
-            <div id="errors"></div>
-
-            <div id="mensaje-condicion">
-              <p class="text-center">No nos podemos comprometer a que todas las trabas podrán ser atendidas y superadas pero estamos seguros que el primer paso es su identificación.</p>
-            </div>
-
-            <div class="row form-group ">
-              <div class="col-sm-12 text-center">
-                <button type="button" class="btn btn-primary btn-sm" style="background:#FF3D16 !important;" onclick="fn_enviarTraba();"> Enviar </button>       
-                <button type="button" class="btn btn-default btn-sm"  onclick="fn_cancelar();"> Cancelar </button>                            
-              </div>
-            </div>     
-          </form>
-        </div>
-	  	<div id="footer">
+    	<section id="formulario">
+        	<div class="container">
+          		<form id="form-traba">
+              		<div class="row form-group">
+              			<label class="col-sm-4 form-control-label text-right"><b>¿Dónde encontraste una traba?</b>
+              				<span class="asterisco">(*)</span>
+              			</label>               
+              			<div class="col-sm-8">
+              				<select class = "form-control input-sm" id="cboEntidad" name="Traba[entidad]"> 
+               					<option value="0">SELECCIONE</option>
+               					<option value="2">GOBIERNO REGIONAL</option>
+               					<option value="1">MINISTERIO</option>
+               					<option value="3">MUNICIPALIDAD</option>
+               					<option value="82">ORGANISMOS AUTÓNOMOS</option>
+               					<option value="4">OTRO</option>
+               				</select>   
+             			</div>
+           			</div>
+           			<div class="row form-group hidden entidad">
+						<label class="col-sm-4 form-control-label text-right"><b>¿En que entidad?</b><span class="asterisco">(*)</span></label>               
+						<div class="col-sm-8">
+							<select class = "form-control input-sm" id="cboEntidadDetalle" name="Traba[detalle_entidad]"> 
+							<option value="0">SELECCIONE</option>               
+							</select>              
+						</div>
+        			</div>
+        			<div class="row form-group hidden nivel3">
+          				<label class="col-sm-4 form-control-label text-right"><b>¿En que organismo?</b></label>               
+          				<div class="col-sm-8">
+           					<select class = "form-control input-sm" id="cboDetalle3" name="Traba[detalle3]"> 
+								<option value="0">SELECCIONE</option>               
+							</select>              
+        				</div>
+      				</div>
+      				<div class="ubigeo">
+       					<div class="row form-group hidden">
+        					<label class="col-sm-4 form-control-label text-right"><b>Departamento:</b></label>               
+        					<div class="col-sm-8">
+         						<select class = "form-control input-sm" id="departamento" name="Traba[departamento]"> 
+           							<option value="0">SELECCIONE</option>
+           							<option value="01">AMAZONAS</option>
+           							<option value="02">ANCASH</option>
+           							<option value="03">APURIMAC</option>
+           							<option value="04">AREQUIPA</option>
+           							<option value="05">AYACUCHO</option>
+           							<option value="06">CAJAMARCA</option>
+           							<option value="07">CALLAO</option>
+           							<option value="08">CUSCO</option>
+           							<option value="09">HUANCAVELICA</option>
+           							<option value="10">HUANUCO</option>
+           							<option value="11">ICA</option>
+           							<option value="12">JUNIN</option>
+           							<option value="13">LA LIBERTAD</option>
+           							<option value="14">LAMBAYEQUE</option>
+           							<option value="15">LIMA</option>
+           							<option value="16">LORETO</option>
+           							<option value="17">MADRE DE DIOS</option>
+           							<option value="18">MOQUEGUA</option>
+           							<option value="19">PASCO</option>
+           							<option value="20">PIURA</option>
+           							<option value="21">PUNO</option>
+           							<option value="22">SAN MARTIN</option>
+           							<option value="23">TACNA</option>
+           							<option value="24">TUMBES</option>
+           							<option value="25">UCAYALI</option>           
+         						</select>              
+       						</div>
+     					</div>
+				 		<div class="row form-group hidden">
+				  			<label class="col-sm-4 form-control-label text-right"><b>Provincia:</b></label>               
+				  			<div class="col-sm-8">
+								<select class = "form-control input-sm" id="provincia" name="Traba[provincia]"> 
+								  <option value="0">SELECCIONE</option>                    
+								</select> 
+				  			</div>
+						</div>
+						<div class="row form-group hidden">
+						  	<label class="col-sm-4 form-control-label text-right"><b>Distrito:</b></label>               
+						  	<div class="col-sm-8">
+								<select class = "form-control input-sm" id="distrito" name="Traba[distrito]"> 
+							  		<option value="0">SELECCIONE</option>            
+								</select>              
+						  	</div>
+						</div>
+  					</div>
+				  	<div class="row form-group oficina hidden">
+						<label class="col-sm-4 form-control-label text-right "><b>En que Oficina</b></label>               
+						<div class="col-sm-8">
+					  		<input class="form-control input-sm upper" type="text" name="Traba[oficina]"/>              
+						</div>
+				  	</div>
+				  	<div class="row form-group hidden">
+						<label class="col-sm-4 form-control-label text-right "><b>Correo electrónico</b></label>               
+						<div class="col-sm-8">
+					  		<input class="form-control input-sm lower" type="text" name="Traba[correo]"/>              
+						</div>
+				  	</div>
+				  	<div class="row form-group">
+						<label class="col-sm-4 form-control-label text-right">
+							<b>Brevemente, cuéntanos en qué consistió tu traba (máximo 300 caracteres)</b><span class="asterisco">(*)</span></label>               
+						<div class="col-sm-8">
+					 		<textarea class="form-control" rows="4" name="Traba[comentario]" id="comentario"/> </textarea>  
+						</div>
+				  	</div>    
+				  	<div class="row form-group">
+						<label class="col-sm-4 form-control-label text-right"><b>Esto te afecta como:</b><span class="asterisco">(*)</span>:</label> 
+						<div class="col-sm-2">
+					  		<input id="question1" name="Traba[tipo_persona]" type="radio" class="with-font" value="EMPRESA" />
+					  		<label for="question1">Empresa</label>
+						</div>
+						<div class="col-sm-6">
+							<input id="question2" name="Traba[tipo_persona]" type="radio" class="with-font" value="PERSONA" />
+							<label for="question2">Persona</label>
+						</div>
+				  	</div>
+  					<div class="row form-group">
+    					<label class="col-sm-4 form-control-label text-left"><span class="asterisco">(*)</span> Datos obligatorios.</label>  
+  					</div>  
+      				<hr>
+      				<div id="errors"></div>
+      				<div id="mensaje-condicion">
+				  		<p class="text-center">No nos podemos comprometer a que todas las trabas podrán ser atendidas y superadas pero estamos seguros que el primer paso es su identificación.</p>
+			  		</div>
+				  	<div class="row form-group ">
+					  	<div class="col-sm-12 text-center">
+							<button type="button" class="btn btn-primary btn-sm" style="background:#FF3D16 !important;" onclick="fn_enviarTraba();"> Enviar </button>       
+							<button type="button" class="btn btn-default btn-sm"  onclick="fn_cancelar();"> Cancelar </button>                            
+					  	</div>
+				  	</div>     
+    			</form>
+   			</div> 
+  		</section> 	
+	 	<div id="footer">
 			<div class="container">
 		  		<div class="row">
 					<div class="col-md-4 col-sm-4 col-xs-12 hidden-responsive">
@@ -356,277 +379,280 @@
 			  			<p class="copyright">Copyright © 2016 Ministerio de la Producción.</p>
 					</div>
 					<div class="col-md-4 col-sm-4 col-xs-12 hidden-responsive">
-			  			<a href="#" class="preguntas-frecuentes">Preguntas frecuentes</a>
+			  			<a href="javascritp:;" class="preguntas-frecuentes" onclick="fn_preguntas();">Preguntas frecuentes</a>
 					</div>           
 		  		</div>
 			</div>
-	  	</div>
-
-
-<!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-
+	  </div>
+	<!-- Modal -->
+	<!--pregunta uno traba-->
+		<div class="modal fade" id="alert-traba" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel"><b>¿Qué es una Traba?</b></h4>
+					</div>
+					<div class="modal-body">
+            <img src="http://i63.tinypic.com/24ozzag.png" class="img-alert" alt="¿Qué es una traba?">
+						<p class="text-alert-traba">Una traba es un trámite, requisito, procedimiento que afecta a una persona o una empresa, pero NO en particular, sino que puede afectar a todos los que pasan por el mismo proceso o usan el mismo servicio. Una traba NO es una denuncia, una queja o un reclamo. DimeTuTraba.pe no es un servicio de atención individual.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!--pregunta dos denuncia o reclamo-->
+		<div class="modal fade" id="alert-denuncia" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel"><b>¿Tienes una denuncia y/o reclamo?</b></h4>
+					</div>
+					<div class="modal-body">
+						<img src="http://i65.tinypic.com/kf1cf9.png" class="img-alert" alt="¿Tienes una denuncia o reclamo?">
+            <p class="text-alert-traba">Cada institución tiene su propio sistema de Denuncias, Reclamos y/o Quejas. Recomendamos usar el Libro de Reclamaciones de cada institución en caso de tener una denuncia o queja más que una Traba.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- 	preguntas frecuentes-->
+  		<div class="modal fade" id="myModal" role="dialog">
+    		<div class="modal-dialog">
       <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title"><b>Preguntas frecuentes</b></h4>
-        </div>
-        <div class="modal-body">     
-          <b>1.- ¿Por qué no se me pide información de contacto?</b><br>
-          <p align="justify">DimeTuTraba.pe es una interfase de registro masivo y anónimo de trabas y por esa razón no se pide ninguna información de contacto. No vamos a responder individualmente por que una Traba no afecta a una sola persona sino a todos. Conformen se vayan resolviendo las trabas se comunicarán desde los propios ministerios, oficinas y organismos por medio de comunicados en diversos medios y en sus portales institucionales.</p><br>
-          <b>2.- ¿Que es una Traba?</b><br>
-          <p align="justify">Una traba es un trámite, requisito, procedimiento que afecta a una persona o una empresa, pero NO en particular, sino que puede afectar a todos los que pasan por el mismo proceso o usan el mismo servicio. Una traba NO es una denuncia, una queja o un reclamo. DimeTuTraba.pe no es un servicio de atención individual.</p><br>
-          <b>3.- ¿Y si queiro hacer una Denuncia o un Reclamo?</b><br>
-          <p align="justify">Cada institución tiene su propio sistema de Denuncias, Reclamos y/o Quejas. Recomendamos usar el Libro de Reclamaciones de cada institución en caso de tener una denuncia o queja más que una Traba.</p><br>
-          <b>4.- ¿Hay personas que quieren decir su Traba por teléfono, es eso posible?</b><br>
-          <p align="justify">Estamos probando una opción que nos permitirá registrar trabas por medio de grabaciones pero por le momento la única opción es el mini site o pagina web <a href="http://www.dimetutraba.pe">http://www.dimetutraba.pe</a></p><br> 
-          <b>5.- ¿Cómo se si mi Traba ha sido "escuchada" y si será atendida?</b><br>
-          <p align="justify">Toda la información registrada será enviada a los ministerios, oficinas y organismos involucrados y el Ministerio de la Producción en coordinación con la Presidencia del Consejo de Ministros hará el seguimiento al análisis de la información y a la implementación de los posibles mejoras. Conformen se vayan resolviendo las trabas se comunicarán desde los propios ministerios, oficinas y organismos por medio de comunicados y en sus portales institucionales.</p>         
+      			<div class="modal-content">
+					<div class="modal-header">
+					  <button type="button" class="close" data-dismiss="modal">&times;</button>
+					  <h4 class="modal-title"><b>Preguntas frecuentes</b></h4>
+					</div>
+        			<div class="modal-body">     
+          				<b>1.- ¿Por qué no se me pide información de contacto?</b><br>
+          				<p align="justify"><b>DimeTuTraba.pe</b> es una interfase de registro masivo y anónimo de trabas y por esa razón no se pide ninguna información de contacto. No vamos a responder individualmente por que una Traba no afecta a una sola persona sino a todos. Conformen se vayan resolviendo las trabas se comunicarán desde los propios ministerios, oficinas y organismos por medio de comunicados en diversos medios y en sus portales institucionales.</p><br>
+          				<b>2.- ¿Hay personas que quieren decir su Traba por teléfono, es eso posible?</b><br>
+          				<p align="justify">Estamos probando una opción que nos permitirá registrar trabas por medio de grabaciones pero por el momento la única opción es el mini site o página web <a href="http://www.dimetutraba.pe">http://www.dimetutraba.pe</a></p><br> 
+          				<b>3.- ¿Cómo sé si mi Traba ha sido "escuchada" y si será atendida?</b><br>
+          				<p align="justify">Toda la información registrada será enviada a los ministerios, oficinas y organismos involucrados y el Ministerio de la Producción en coordinación con la Presidencia del Consejo de Ministros hará el seguimiento al análisis de la información y a la implementación de los posibles mejoras. Conformen se vayan resolviendo las trabas se comunicarán desde los propios ministerios, oficinas y organismos por medio de comunicados y en sus portales institucionales.</p> 
+        			</div>
+        			<div class="modal-footer">
+          				<button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cerrar</button>
+        			</div>
+      			</div>      
+    		</div>
+  		</div>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+									})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cerrar</button>
-        </div>
-      </div>      
-    </div>
-  </div>
+			ga('create', 'UA-87342479-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script type="text/javascript">
+			function fn_preguntas(){
+				$("#myModal").modal();
+			}
+			function aparecerBtnTraba(){
+				$("#alert-traba").modal();
+			}
+			function aparecerAlertDenuncia(){
+				$("#alert-denuncia").modal();
+			}
+			function MaxLengthLimit(input, maxLength){
+				$(input).after('<h6 class="pull-right" id="' + $(input).attr('id') + '_limit" ng-show="validarEstado">0/' + maxLength + '</h6>');
+				$(input).attr("onkeyup", "return validarLengthInput('" + input + "'," + maxLength + ")");
+				$(input).attr("maxlength", maxLength);
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+				var max = maxLength;
+				//$(input).html(max + ' caracteres');
+			}
+			function validarLengthInput(input, maxLength){
+				//debugger;
+				var length = $(input).val().length;
+				var value = maxLength - length;
+				value = value < 0 ? 0 : value;
+				$('#'+$(input).attr('id') + '_limit').text(length + '/'+maxLength);
+				if (value <= 0)
+					$(input).val(ellipse($(input).val(),maxLength));
+			}
+			function ellipse(str, max) {
+				return str.length >= max ? str.substring(0, max): str;
+			}
+			function fn_cancelar(){
+				location.href = "http://www.dimetutraba.pe/";
+			}
+			function fn_mensajeFinal(id_traba){
+				var theResponse = null;
+				$.ajax({
+					url: 'http://www.dimetutraba.pe/content/_Agradecimiento.php',
+					type: 'POST',
+					data: {id_traba:id_traba},
+					dataType: "html",
+					async: false,
+					success: function(respText){
+						theResponse = respText;
+					}
+				});
 
-  ga('create', 'UA-87342479-1', 'auto');
-  ga('send', 'pageview');
+				bootbox.confirm({
+					message: theResponse,
+					closeButton: false,
+					onEscape :false,
+					buttons: {
+						cancel: {
+							label: '<i class="fa fa-times"></i> Cancel',
+							className:'hidden'
+						},
+						confirm: {
+							label: '<i class="fa fa-check"></i> OK'
+						}
+					},
+					callback: function (result) {
+						if(result)
+							location.reload();
+					}
+				});
+			}
+			function fn_enviarTraba(){
+				var dialog = bootbox.dialog({
+					message: '<p><i class="fa fa-spin fa-spinner"></i> Guardando...</p>',
+					closeButton: false,
+					show:false
+				});
 
-</script>
+				$.ajax({
+					type: "POST",
+					url: 'http://www.dimetutraba.pe/ajax2/guardar-datos-traba-ajax.php',            
+					data: $("#form-traba").serialize(),
+					dataType:"json",
+					async:false,
+					beforeSend: function () {
+						$("#errors").hide();
+						dialog.modal('show');
+						$(".btn").attr("disabled","disabled");
+					},
+					complete: function () {
+						dialog.modal('hide');
+					},
+					success: function (response) {
+						$(".btn").removeAttr("disabled");
+						fn_mensajeFinal(response['id_traba']);				
+					},
+					error: function (result) {
 
+						$(".btn").removeAttr("disabled");
 
-<script type="text/javascript">
+						$("#errors").html(result.responseText).hide();
+						$('form').animate({ scrollTop: 0 }, '500', 'swing', function () {
+							$("#errors").slideDown(500, function () { });
+						});
 
-function fn_preguntas()
-{
-  $("#myModal").modal();
-}
+					},
+				});
+			}
+			$(document).ready(function(e) {
+				MaxLengthLimit("#comentario", 300)
+				$("#cboEntidad").change(function(e) {
+					var value = $(this).val();
+					$.ajax({
+						url:'http://www.dimetutraba.pe/dimetutraba/getDatosEntidad/'+$(this).val(),
+						data:{ },
+						type:'POST',
+						dataType:"json",
+						success: function(response){			
 
-function MaxLengthLimit(input, maxLength)
-{
-
-    $(input).after('<h6 class="pull-right" id="' + $(input).attr('id') + '_limit" ng-show="validarEstado">0/' + maxLength + '</h6>');
-    $(input).attr("onkeyup", "return validarLengthInput('" + input + "'," + maxLength + ")");
-  $(input).attr("maxlength", maxLength);
-
-    var max = maxLength;
-    //$(input).html(max + ' caracteres');
-}
-function validarLengthInput(input, maxLength)
-{
-    //debugger;
-    var length = $(input).val().length;
-    var value = maxLength - length;
-    value = value < 0 ? 0 : value;
-    $('#'+$(input).attr('id') + '_limit').text(length + '/'+maxLength);
-    if (value <= 0)
-        $(input).val(ellipse($(input).val(),maxLength));
-}
-
-function ellipse(str, max) {
-    return str.length >= max ? str.substring(0, max): str;
-}
-
-function fn_cancelar()
-{
-  location.href = "http://www.dimetutraba.pe/";
-}
-function fn_mensajeFinal(id_traba)
-{
-    var theResponse = null;
-        $.ajax({
-            url: 'http://www.dimetutraba.pe/content/_Agradecimiento.php',
-            type: 'POST',
-            data: {id_traba:id_traba},
-            dataType: "html",
-            async: false,
-            success: function(respText){
-                theResponse = respText;
-            }
-        });
-  
-    bootbox.confirm({
-      message: theResponse,
-      closeButton: false,
-      onEscape :false,
-      buttons: {
-        cancel: {
-          label: '<i class="fa fa-times"></i> Cancel',
-          className:'hidden'
-        },
-        confirm: {
-          label: '<i class="fa fa-check"></i> OK'
-        }
-      },
-      callback: function (result) {
-        if(result)
-        location.reload();
-      }
-    });
-}
-
-function fn_enviarTraba()
-{
-  
-  var dialog = bootbox.dialog({
-    message: '<p><i class="fa fa-spin fa-spinner"></i> Guardando...</p>',
-    closeButton: false,
-    show:false
-  });
-  
-  $.ajax({
-            type: "POST",
-            url: 'http://www.dimetutraba.pe/ajax2/guardar-datos-traba-ajax.php',            
-            data: $("#form-traba").serialize(),
-      dataType:"json",
-      async:false,
-            beforeSend: function () {
-         $("#errors").hide();
-               dialog.modal('show');
-         $(".btn").attr("disabled","disabled");
-            },
-            complete: function () {
-                dialog.modal('hide');
-            },
-            success: function (response) {
-        $(".btn").removeAttr("disabled");
-        fn_mensajeFinal(response['id_traba']);        
-            },
-            error: function (result) {
-        
-        $(".btn").removeAttr("disabled");
-        
-                $("#errors").html(result.responseText).hide();
-                $('form').animate({ scrollTop: 0 }, '500', 'swing', function () {
-                    $("#errors").slideDown(500, function () { });
-                });
-
-            },
-    });
-}
-
-
-
-
-$(document).ready(function(e) {
-    
-  
-   MaxLengthLimit("#comentario", 300)
-  
-  $("#cboEntidad").change(function(e) {
-       
-     var value = $(this).val();
-     
-     $.ajax({
-      url:'http://www.dimetutraba.pe/dimetutraba/getDatosEntidad/'+$(this).val(),
-      data:{ },
-      type:'POST',
-      dataType:"json",
-      success: function(response){      
-        
-        $(".nivel3").slideUp(500).addClass("hidden");
-        if ( response['caso'] == null || response['caso'] == "" )
-          {         
-          $(".entidad").removeClass("hidden").hide().slideDown(500); 
-          $(".ubigeo div").addClass("hidden").hide().slideUp(500);   
-          }else if ( response['caso'] == 'UBIGEO'){
-          $(".ubigeo div").removeClass("hidden").hide().slideDown(500);  
-          $(".entidad").addClass("hidden").hide().slideUp(500);  
-            }else if ( response['caso'] == 'NINGUNO'|| value == 0 ){
-          $(".ubigeo div").addClass("hidden").hide().slideUp(500);  
-          $(".entidad").addClass("hidden").hide().slideUp(500);  
-         }
-      }
-    }); 
-      
-     
-     if (value != 0 )
-     {
-      $(".oficina").removeClass("hidden").hide().slideDown(500); 
-     }
-     else
-     {
-      $(".oficina").addClass("hidden").slideUp(500);   
-     }
-
-      $.ajax({
-      url:'http://www.dimetutraba.pe/dimetutraba/entidad/'+$("#cboEntidad").val(),
-      data:{},
-      type:'POST',
-      dataType:"json",
-      success: function(response){                
-        $("#cboEntidadDetalle").html(response['listado']);        
-        //if( response['mostrarTercerNivel'] )
-          //$(".nivel3").removeClass("hidden").hide().slideDown(500);  
-        //else
-          //$(".nivel3").slideUp(500).addClass("hidden");
-      }
-    }); 
-
-    });
-  
+							$(".nivel3").slideUp(500).addClass("hidden");
+							if ( response['caso'] == null || response['caso'] == "" )
+							{					
+								$(".entidad").removeClass("hidden").hide().slideDown(500); 
+								$(".ubigeo div").addClass("hidden").hide().slideUp(500);   
+							}else if ( response['caso'] == 'UBIGEO'){
+								$(".ubigeo div").removeClass("hidden").hide().slideDown(500);  
+								$(".entidad").addClass("hidden").hide().slideUp(500);  
+							}else if ( response['caso'] == 'NINGUNO'|| value == 0 ){
+								$(".ubigeo div").addClass("hidden").hide().slideUp(500);  
+								$(".entidad").addClass("hidden").hide().slideUp(500);  
+							}
+						}
+					});	
 
 
-  //Start Change Entidad Nivel 2
-  $("#cboEntidadDetalle").change(function(e) {    
-    $.ajax({
-      url:'http://www.dimetutraba.pe/dimetutraba/entidad/'+$(this).val(),
-      data:{},
-      type:'POST',
-      dataType:"json",
-      success: function(response){                
-        $("#cboDetalle3").html(response['listado']);
-        if( response['mostrarTercerNivel'] )
-          $(".nivel3").removeClass("hidden").hide().slideDown(500);  
-        else
-          $(".nivel3").slideUp(500).addClass("hidden");
-      }
-    }); 
-  });
-  //End
+					if (value != 0 )
+					{
+						$(".oficina").removeClass("hidden").hide().slideDown(500); 
+					}
+					else
+					{
+						$(".oficina").addClass("hidden").slideUp(500);   
+					}
 
-  //ubigeo  
-  $("#departamento").change(function(e) {    
-    $.ajax({
-      url:'http://www.dimetutraba.pe/acuicultura/provincia/'+$(this).val(),
-      data:{codigo_departamento : $(this).val()},
-      type:'POST',
-      success: function(response){      
-        $("#provincia").html(response);
-        $("#provincia option[value=0]").html('SELECCIONE');
-        $("#provincia").change();
-      }
-    }); 
-  });
-  
-  $("#provincia").change(function(e) {
-    
-    $.ajax({
-      url:'http://www.dimetutraba.pe/acuicultura/distrito/'+$("#departamento").val()+'/'+$(this).val(),
-      data:{},
-      type:'POST',
-      success: function(response){        
-        $("#distrito").html(response);
-        $("#distrito option[value=0]").html('SELECCIONE');
-      }
-    }); 
-  });
+					$.ajax({
+						url:'http://www.dimetutraba.pe/dimetutraba/entidad/'+$("#cboEntidad").val(),
+						data:{},
+						type:'POST',
+						dataType:"json",
+						success: function(response){								
+							$("#cboEntidadDetalle").html(response['listado']);				
+							//if( response['mostrarTercerNivel'] )
+							//$(".nivel3").removeClass("hidden").hide().slideDown(500);  
+							//else
+							//$(".nivel3").slideUp(500).addClass("hidden");
+						}
+					});	
 
-});
-</script>
-  </div>
-    
-    <script type="text/javascript" src="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/views/layout/default/js/site.js"></script> 
-</body> 
+				});
+
+				//Start Change Entidad Nivel 2
+				$("#cboEntidadDetalle").change(function(e) {		
+					$.ajax({
+						url:'http://www.dimetutraba.pe/dimetutraba/entidad/'+$(this).val(),
+						data:{},
+						type:'POST',
+						dataType:"json",
+						success: function(response){								
+							$("#cboDetalle3").html(response['listado']);
+							if( response['mostrarTercerNivel'] )
+								$(".nivel3").removeClass("hidden").hide().slideDown(500);  
+							else
+								$(".nivel3").slideUp(500).addClass("hidden");
+						}
+					});	
+				});
+				//End
+
+				//ubigeo	
+				$("#departamento").change(function(e) {    
+					$.ajax({
+						url:'http://www.dimetutraba.pe/acuicultura/provincia/'+$(this).val(),
+						data:{codigo_departamento : $(this).val()},
+						type:'POST',
+						success: function(response){			
+							$("#provincia").html(response);
+							$("#provincia option[value=0]").html('SELECCIONE');
+							$("#provincia").change();
+						}
+					});	
+				});
+
+				$("#provincia").change(function(e) {
+					$.ajax({
+						url:'http://www.dimetutraba.pe/acuicultura/distrito/'+$("#departamento").val()+'/'+$(this).val(),
+						data:{},
+						type:'POST',
+						success: function(response){				
+							$("#distrito").html(response);
+							$("#distrito option[value=0]").html('SELECCIONE');
+						}
+					});	
+				});
+			});
+		</script>
+    	<script type="text/javascript" src="http://www.produce.gob.pe/ConsultasEnLinea/consultas.web/views/layout/default/js/site.js"></script> 
+	</body> 
 </html> 
 
