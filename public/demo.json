@@ -1,4 +1,4 @@
-var dataReporte = {
+{
       "Hoja1": [
       {
         "id_detalle": "2558",
@@ -5931,3 +5931,4 @@ var dataReporte = {
         "detalle_oficina": "Sucamec"
       }         
     ]
+}
