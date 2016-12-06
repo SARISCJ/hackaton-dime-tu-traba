@@ -37,10 +37,14 @@
 	<body>
 		<style type="text/css">
 		  /*  body { margin: 30px; }  */
-			.img-alert{
+	
+      .img-alert{
          width: 40%;
          margin: 2rem 18rem;
       }
+      a, a:hover{
+        text-decoration: none;
+      }      
       input[type=radio].with-font,
 			input[type=checkbox].with-font {
 				border: 0;
@@ -112,6 +116,13 @@
 				border-top: 13.6rem solid #fff;
 				border-right: 21rem solid transparent;
 			}
+      /*formulario*/
+      #mensaje-condicion{
+        text-align: center;
+        font-style: italic;
+        padding: 1.5rem;
+      }
+
 		 /*section btn*/
 			.section-btn{
 				background: #F6F8F7;
@@ -128,6 +139,10 @@
 				text-decoration: none;
 				background: #e60606;
 			}
+      .btn-default:hover,.btn-default:focus {
+        text-decoration: none;
+        background: #737373;
+      } 
 			.text-form{
 				margin: 4rem;
 				line-height: 2rem;
@@ -165,18 +180,22 @@
 				.header-back h3 {
 					color: white;
 					font-size: 1em;
+          margin: 1.5rem;
 					text-align: center;
 				}
 				.header-back {
 					margin-left: 0;
 					margin-right: 0;
-				}
+				}        
+        .img-logo{
+          margin: 1rem 11rem;
+        }
+        .fondo-img {
+          height: 0;
+          border-right: 0rem solid transparent;            
+        }        
 				.menu-btn{
 					text-align: center;
-				}
-				.fondo-img {
-					border-top: 12.6rem solid #fff;
-					border-right: 18rem solid transparent;
 				}
 				.option-btn {
 					font-size: 0.9em;
@@ -207,43 +226,44 @@
 			}
 		</style>
 		<header class="header-back">
-		  	<div class="col-sm-3 fondo-img">
-				<img src="http://i63.tinypic.com/azgvtd.png " alt="dime-tu-traba">
-			</div>
-		  	<div class="col-sm-5 col-sm-offset-3 text-right header-text">
-				<h3>¡Ayúdanos a identificar las trabas que se te presentan en tu día a día!</h3>
-		  	</div>
-	  	</header>
-	  	<section class="section-btn">
-		  	<div class="container">
-			  	<div class="row">
-				  	<div class="col-sm-12 menu-btn">
+        <div class="row">
+          <div class="col-sm-3 fondo-img">
+            <a href="index.html"><img src="http://i63.tinypic.com/azgvtd.png" class="img-logo" alt="dime-tu-traba"></a>
+          </div>
+          <div class="col-sm-5 col-sm-offset-3 text-right header-text">
+            <h3>¡Ayúdanos a identificar las trabas que se te presentan en tu día a día!</h3>
+          </div>          
+        </div>
+	  </header>
+	  <section class="section-btn">
+		  <div class="container">
+			 	<div class="row">
+				 	<div class="col-sm-12 menu-btn">
 						<button type="button" class="btn option-btn btn1 col-sm-12 col-md-12 col-lg-3" data-toggle="modal" data-target="#alert-traba">¿Qué es una traba?</button>
 						<button type="button" class="btn option-btn col-sm-12 col-md- col-lg-3" data-toggle="modal" data-target="#alert-denuncia">¿Tienes una denuncia y/o reclamo?</button>
-					  	<a href="estadistica.html">
-					  		<button type="button" class="btn option-btn col-sm-12 col-md-3 col-lg-3">¡Mira las estadìsticas!</button>
-					  	</a>
+					 	<button type="button" href="estadistica.html" class="btn option-btn col-sm-12 col-md-3 col-lg-3">¡Mira las estadísticas!</button>
 				  	</div>
 			  	</div>
 		  	</div>
-	  	</section>
-	  	<section>
-		  	<div class="container">
-			  	<div class="row">
-				  	<div class="text-form col-sm-12">
-					  	<h1>Dime tu traba</h1>
-					  	<h3>Todo trámite, procedimiento o requisito que te parezca autoritario, innecesario y/o repetitivo, puedes resgistrarlo en el siguiente formulario. Esta información será alcanzada a todas las instancias y autoridades relevantes y necesarias para su análisis y propuesta de mejora.</h3>
-				  	</div>
-			  	</div>
-		  	</div>
-	 	</section>
-    	<section id="formulario">
-        	<div class="container">
-          		<form id="form-traba">
-              		<div class="row form-group">
-              			<label class="col-sm-4 form-control-label text-right"><b>¿Dónde encontraste una traba?</b>
-              				<span class="asterisco">(*)</span>
-              			</label>               
+      </div>
+	  </section>
+	  <section>
+		  <div class="container">
+			  <div class="row">
+				  <div class="text-form col-sm-12">
+					  <h1>Dime tu traba</h1>
+					  <h3>Todo trámite, procedimiento o requisito que te parezca autoritario, innecesario y/o repetitivo, puedes registrarlo en el siguiente formulario. Esta información será alcanzada a todas las instancias y autoridades relevantes y necesarias para su análisis y propuesta de mejora.</h3>
+				  </div>
+			  </div>
+		  </div>
+	  </section>
+    <section id="formulario">
+       <div class="container">
+          <form id="form-traba">
+            <div class="row form-group">
+              <label class="col-sm-4 form-control-label text-right"><b>¿Dónde encontraste una traba?</b>
+          		  <span class="asterisco">(*)</span>
+              </label>               
               			<div class="col-sm-8">
               				<select class = "form-control input-sm" id="cboEntidad" name="Traba[entidad]"> 
                					<option value="0">SELECCIONE</option>
@@ -358,12 +378,13 @@
       				<hr>
       				<div id="errors"></div>
       				<div id="mensaje-condicion">
-				  		<p class="text-center">No nos podemos comprometer a que todas las trabas podrán ser atendidas y superadas pero estamos seguros que el primer paso es su identificación.</p>
-			  		</div>
+				  		  <p>No nos podemos comprometer a que todas las trabas podrán ser atendidas y superadas pero estamos seguros que el primer paso es su identificación.</p>
+                <p>Si lo tuyo es una queja, te sugerimos revises estás páginas. <a href="">Clic aquí</a></p>
+			  		</div> 
 				  	<div class="row form-group ">
 					  	<div class="col-sm-12 text-center">
-							<button type="button" class="btn btn-primary btn-sm" style="background:#FF3D16 !important;" onclick="fn_enviarTraba();"> Enviar </button>       
-							<button type="button" class="btn btn-default btn-sm"  onclick="fn_cancelar();"> Cancelar </button>                            
+							<button type="button" class="btn btn-primary btn-md" onclick="fn_enviarTraba();"> Enviar </button>       
+							<button type="button" class="btn btn-default btn-md" onclick="fn_cancelar();"> Cancelar </button>                            
 					  	</div>
 				  	</div>     
     			</form>
@@ -548,8 +569,8 @@
 						$(".btn").removeAttr("disabled");
 
 						$("#errors").html(result.responseText).hide();
-						$('form').animate({ scrollTop: 0 }, '500', 'swing', function () {
-							$("#errors").slideDown(500, function () { });
+						$('form').animate({ scrollTop: 0 }, '200', 'swing', function () {
+							$("#errors").slideDown(200, function () { });
 						});
 
 					},
@@ -566,17 +587,17 @@
 						dataType:"json",
 						success: function(response){			
 
-							$(".nivel3").slideUp(500).addClass("hidden");
+							$(".nivel3").slideUp(200).addClass("hidden");
 							if ( response['caso'] == null || response['caso'] == "" )
 							{					
-								$(".entidad").removeClass("hidden").hide().slideDown(500); 
-								$(".ubigeo div").addClass("hidden").hide().slideUp(500);   
+								$(".entidad").removeClass("hidden").hide().slideDown(200); 
+								$(".ubigeo div").addClass("hidden").hide().slideUp(200);   
 							}else if ( response['caso'] == 'UBIGEO'){
-								$(".ubigeo div").removeClass("hidden").hide().slideDown(500);  
-								$(".entidad").addClass("hidden").hide().slideUp(500);  
+								$(".ubigeo div").removeClass("hidden").hide().slideDown(200);  
+								$(".entidad").addClass("hidden").hide().slideUp(200);  
 							}else if ( response['caso'] == 'NINGUNO'|| value == 0 ){
-								$(".ubigeo div").addClass("hidden").hide().slideUp(500);  
-								$(".entidad").addClass("hidden").hide().slideUp(500);  
+								$(".ubigeo div").addClass("hidden").hide().slideUp(200);  
+								$(".entidad").addClass("hidden").hide().slideUp(200);  
 							}
 						}
 					});	
@@ -584,11 +605,11 @@
 
 					if (value != 0 )
 					{
-						$(".oficina").removeClass("hidden").hide().slideDown(500); 
+						$(".oficina").removeClass("hidden").hide().slideDown(200); 
 					}
 					else
 					{
-						$(".oficina").addClass("hidden").slideUp(500);   
+						$(".oficina").addClass("hidden").slideUp(200);   
 					}
 
 					$.ajax({
@@ -617,9 +638,9 @@
 						success: function(response){								
 							$("#cboDetalle3").html(response['listado']);
 							if( response['mostrarTercerNivel'] )
-								$(".nivel3").removeClass("hidden").hide().slideDown(500);  
+								$(".nivel3").removeClass("hidden").hide().slideDown(200);  
 							else
-								$(".nivel3").slideUp(500).addClass("hidden");
+								$(".nivel3").slideUp(200).addClass("hidden");
 						}
 					});	
 				});
